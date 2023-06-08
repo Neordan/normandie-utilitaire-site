@@ -3,7 +3,7 @@ import React from 'react';
 const Logo = () => {
     return (
         <div className="logo">
-            <img src="" alt="" />
+            <img src={require('../assets/img/logoversionmobile.png')} alt="Logo de Normandie Utilitaire" />
         </div>
     );
 };
