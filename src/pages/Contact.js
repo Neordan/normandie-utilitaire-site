@@ -13,6 +13,11 @@ const Contact = () => {
                 <TitlePage title="contact" image={require('../assets/img/icons/e-mail.png')} alt="Icône d'un e-mail" />
             </div>
             
+
+
+                        Vous pouvez nous contacter par téléphone au 02 32 12 12 12 ou par e-mail à l'adresse suivante :
+                   
+               
             <Footer />
         </div>
     );
