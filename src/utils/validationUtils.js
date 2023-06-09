@@ -1,11 +1,12 @@
 // Fonction de validation de l'email
-function validateEmail(email) {
+// Fonction de validation de l'email
+export function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
   
   // Fonction de validation du numéro de téléphone
-  function validatePhoneNumber(phoneNumber) {
+  export function validatePhoneNumber(phoneNumber) {
     const phoneRegex = /^0[1-9]\d{8}$/;
     return phoneRegex.test(phoneNumber);
   }

@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
 import Description from '../components/Description';
 import Footer from '../components/Footer';
-
 const Home = () => {
     return (
         <div>
