@@ -3,6 +3,7 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import TitlePage from '../components/TitlePage';
+import ContactForm from '../components/FormContact';
 
 const Contact = () => {
     return (
@@ -12,12 +13,7 @@ const Contact = () => {
             <div className="title-contact">
                 <TitlePage title="contact" image={require('../assets/img/icons/e-mail.png')} alt="Icône d'un e-mail" />
             </div>
-            
-
-
-                        Vous pouvez nous contacter par téléphone au 02 32 12 12 12 ou par e-mail à l'adresse suivante :
-                   
-               
+            <ContactForm />   
             <Footer />
         </div>
     );
