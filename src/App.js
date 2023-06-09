@@ -5,6 +5,7 @@ import Repair from './pages/Repair';
 import Location from './pages/Location';
 import LegalNotice from './pages/LegalNotice';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Contact from './pages/Contact';
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/" element={<Home />}/>
             <Route path="/reparation" element={<Repair />}/>
             <Route path="/location" element={<Location />}/>
+            <Route path="/contact" element={<Contact />}/>
             <Route path="/mentions_legales" element={<LegalNotice />}/>
             <Route path="/politique_de_confidentialite" element={<PrivacyPolicy />}/>
             <Route path="*" element={<Home/>}/>
