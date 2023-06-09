@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { validateEmail, validatePhoneNumber } from '../utils/validationUtils';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -18,8 +19,21 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validation des données
+        if (!validateEmail(formData.email)) {
+            console.log('Adresse e-mail invalide');
+            return;
+        }
+
+        if (!validatePhoneNumber(formData.phoneNumber)) {
+            console.log('Numéro de téléphone invalide');
+            return;
+        }
+
         // Logique d'envoi du formulaire par e-mail
         console.log(formData);
+
         // Réinitialiser le formulaire
         setFormData({
             firstName: '',
