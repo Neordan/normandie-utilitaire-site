@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
+import Footer from '../components/Footer';
 
 const LegalNotice = () => {
     return (
@@ -64,6 +65,7 @@ const LegalNotice = () => {
                     Date de dernière mise à jour des mentions légales : [date de la dernière mise à jour]
                 </p>
             </div>
+            <Footer />
         </div>
     );
 };
