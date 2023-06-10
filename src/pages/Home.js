@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="A propos de nous" />
+            <TitlePage title="A propos de nous" image={require('../assets/img/icons/info.png')} alt="Icône d'information'" />
             <Description />
             <Footer />
         </div>
