@@ -6,6 +6,9 @@ import Location from './pages/Location';
 import LegalNotice from './pages/LegalNotice';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Contact from './pages/Contact';
+import TirePage from './pages/TirePage';
+import MaintenancePage from './pages/MaintenancePage';
+import MechanicsPage from './pages/MechanicsPage';
 
 
 const App = () => {
@@ -18,6 +21,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />}/>
             <Route path="/mentions_legales" element={<LegalNotice />}/>
             <Route path="/politique_de_confidentialite" element={<PrivacyPolicy />}/>
+            <Route path="/tire" element={<TirePage />}/>
+            <Route path="/maintenance" element={<MaintenancePage />}/>
+            <Route path="/mechanics" element={<MechanicsPage />}/>
             <Route path="*" element={<Home/>}/>
         </Routes>
         </BrowserRouter>
