@@ -5,6 +5,7 @@ import TitlePage from '../components/TitlePage';
 import LocationCard from '../components/LocationCard';
 import Footer from '../components/Footer';
 
+
 const Location = () => {
     return (
         <div>
