@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { validateEmail, validatePhoneNumber } from '../utils/validationUtils';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
+    // État local pour stocker les données du formulaire
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -10,6 +11,7 @@ const ContactForm = () => {
         message: ''
     });
 
+    // Fonction appelée lorsqu'un champ du formulaire est modifié
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -17,31 +19,38 @@ const ContactForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    // Fonction pour envoyer l'email
+    const sendEmail = (e) => {
         e.preventDefault();
 
-        // Validation des données
-        if (!validateEmail(formData.email)) {
-            console.log('Adresse e-mail invalide');
-            return;
-        }
+        // Utilisation de la référence du formulaire pour accéder aux valeurs des champs
+        const form = e.target;
 
-        if (!validatePhoneNumber(formData.phoneNumber)) {
-            console.log('Numéro de téléphone invalide');
-            return;
-        }
+        // Envoie le formulaire via EmailJS en utilisant la référence du formulaire
+        emailjs
+            .sendForm('service_jiwg0tn', 'template_pqn415f', form, process.env.REACT_APP_ID)
+            .then((result) => {
+                // Réinitialisation du formulaire
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phoneNumber: '',
+                    message: ''
+                });
 
-        // Logique d'envoi du formulaire par e-mail
-        console.log(formData);
+                // Affichage du message de succès
+                console.log('Message envoyé !');
 
-        // Réinitialiser le formulaire
-        setFormData({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phoneNumber: '',
-            message: ''
-        });
+                // Suppression du message de succès après un délai de 2,5 secondes
+                setTimeout(() => {
+                    console.log('');
+                }, 2500);
+            })
+            .catch((error) => {
+                // Affichage du message d'erreur
+                console.log('Une erreur est survenue, veuillez réessayer !');
+            });
     };
 
     return (
@@ -51,7 +60,7 @@ const ContactForm = () => {
                 Vous souhaitez nous faire part d'une demande de devis ?<br />
                 Vous souhaitez nous faire part d'une demande de renseignements ?<br />
             </p>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={sendEmail}>
                 <div className='first-container'>
                     <div>
                         <label htmlFor="firstName">Prénom:</label>
