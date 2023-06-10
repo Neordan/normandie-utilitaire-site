@@ -1,14 +1,15 @@
 import React from 'react';
 
-const CheckboxInput = ({ label, imageSrc, alt, checked, onChange }) => {
+const CheckboxInput = ({ idRelation, label, imageSrc, id, alt, checked, onChange }) => {
     return (
         <div>
-            <label>
+            <label htmlFor={idRelation}>
                 <img src={imageSrc} alt={alt} />
                 {label}
             </label>
             <input
                 type="checkbox"
+                id={id}
                 checked={checked}
                 onChange={onChange}
             />
