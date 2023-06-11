@@ -14,10 +14,12 @@ const Location = () => {
             <TitlePage title="location" image={require("../assets/img/icons/camion (1).png")} alt="Icône de camion" />
             <div className="container">
                 <LocationCard
+                    link="/camion"
                     truckType="Utilitaire 12m³"
                     imageUrl="../assets/img/icons/camion (1).png"
                 />
                 <LocationCard
+                    link="./camion"
                     truckType="Utilitaire 16m³"
                     imageUrl="../assets/img/icons/camion (1).png"
                 />
