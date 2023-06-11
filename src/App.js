@@ -9,6 +9,7 @@ import Contact from './pages/Contact';
 import TirePage from './pages/TirePage';
 import MaintenancePage from './pages/MaintenancePage';
 import MechanicsPage from './pages/MechanicsPage';
+import TruckPage from './pages/TruckPage';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<Home />}/>
             <Route path="/reparation" element={<Repair />}/>
             <Route path="/location" element={<Location />}/>
+            <Route path="/camion" element={<TruckPage />}/>
             <Route path="/contact" element={<Contact />}/>
             <Route path="/mentions_legales" element={<LegalNotice />}/>
             <Route path="/politique_de_confidentialite" element={<PrivacyPolicy />}/>
