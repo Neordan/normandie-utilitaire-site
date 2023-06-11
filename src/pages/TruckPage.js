@@ -1,8 +1,13 @@
 import React from 'react';
+import Logo from '../components/Logo';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const TruckPage = () => {
     return (
         <div>
+            <Logo />
+            <Navigation />
             <div className="header-truck">
                 <img src="" alt="" />
                 <p className="type">Utilitaire 12m³</p>
@@ -47,6 +52,7 @@ const TruckPage = () => {
                     <button className="continue">Continuer</button>
                 </form>
             </div>
+            <Footer />
         </div>
 
     );
