@@ -1,0 +1,19 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 280px 0 35px 0;
+    gap: 3%;
+
+    img {
+        width: 50px;
+    }
+
+    h2 {
+        font-family: "raleway";
+        font-size: 1.7rem;
+        letter-spacing: 5px;
+        color: #E48156;
+        text-align: center;
+    }
+}
