@@ -3,12 +3,10 @@ import React from 'react';
 const Description = () => {
     return (
         <div className="description">
-            <div className="title-container">
-                <h1>Découvrez Normandie Utilisataire :</h1>
+                <h1><span>Découvrez Normandie Utilitaire </span>: votre partenaire incontournable pour des services de qualité et une expérience client exceptionnelle.</h1>
                 <p>
-                    votre partenaire incontournable pour des services de qualité et une expérience client exceptionnelle.
+                Avec plus de 500 clients satisfaits, notre engagement envers votre satisfaction est au cœur de notre entreprise.
                 </p>
-            </div>
             <h3>
                 Chez Normandie Utilisataire, nous sommes à votre écoute.
             </h3>
