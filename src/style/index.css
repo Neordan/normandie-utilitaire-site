@@ -21,16 +21,16 @@ a {
 }
 
 .logo {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #5A5B57;
-  position: fixed;
+  width: 100%;
   height: 170px;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
+  background: #5A5B57;
 }
 .logo img {
   width: 80%;
@@ -158,4 +158,76 @@ a {
   font-family: "Raleway";
   color: #fff;
   font-size: 0.7rem;
+}
+
+.repair-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 92%;
+  margin: 20px auto 35px auto;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 90%;
+  margin: auto;
+  border: 3px solid #5A5B57;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.card-1:hover,
+.card-2:hover,
+.card-3:hover {
+  transform: scale(1.05);
+}
+.card-1::before,
+.card-2::before,
+.card-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: opacity(0.35);
+}
+
+.card-1::before {
+  background: url("../assets/img/images-repair/pneu.jpg") center/cover;
+}
+
+.card-2::before {
+  background: url("../assets/img/images-repair/vidange&revision.jpg") center/cover;
+}
+
+.card-3::before {
+  background: url("../assets/img/images-repair/pneu.jpg") center/cover;
+}
+
+.repair-title {
+  position: relative;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(1, 1, 1, 0.5);
+  margin-top: 10px;
+  color: #5A5B57;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  z-index: 1;
 }/*# sourceMappingURL=index.css.map */

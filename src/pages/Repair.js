@@ -11,9 +11,11 @@ const Repair = () => {
             <Logo />
             <Navigation />
             <TitlePage title="Réparation" image={require('../assets/img/icons/pneu (1).png')} alt="Icône de pneus" />
-            <RepairCard link="/tire" title="pneu" />
-            <RepairCard link="/maintenance" title="vidange & révision" />
-            <RepairCard link="/mechanics" title="mécanique & entretien" />
+            <div className="repair-cards">
+                <RepairCard link="/tire" title="Pneu" cardClass="card-1" />
+                <RepairCard link="/maintenance" title="Vidange & révision" cardClass="card-2" />
+                <RepairCard link="/mechanics" title="Mécanique & entretien" cardClass="card-3" />
+            </div>
             <Footer />
         </div>
     );
