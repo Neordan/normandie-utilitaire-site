@@ -76,6 +76,8 @@ a {
 }
 
 .title {
+  position: relative;
+  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,6 +166,8 @@ a {
 }
 
 .repair-cards {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -285,4 +289,19 @@ a {
 .location-cards .location-under-card p:first-child {
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+.header-truck {
+  margin-top: 270px;
+  text-align: center;
+}
+.header-truck img {
+  width: 90%;
+  max-width: 600px;
+}
+.header-truck p:first-child {
+  font-family: "Raleway";
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 20px;
 }/*# sourceMappingURL=index.css.map */
