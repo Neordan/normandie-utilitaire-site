@@ -12,16 +12,18 @@ const Location = () => {
             <Logo />
             <Navigation />
             <TitlePage title="Location" image={require("../assets/img/icons/camion (1).png")} alt="Icône de camion" />
-            <div className="container">
+            <div className="location-cards">
                 <LocationCard
                     link="/camion"
+                    className="location-card-1"
                     truckType="Utilitaire 12m³"
-                    imageUrl="../assets/img/icons/camion (1).png"
+                    imageUrl={require('../assets/img/camions/CAMION12.jpg')}
                 />
                 <LocationCard
-                    link="./camion"
+                    link="/camion"
+                    className="location-card-2"
                     truckType="Utilitaire 16m³"
-                    imageUrl="../assets/img/icons/camion (1).png"
+                    imageUrl={require('../assets/img/camions/CAMION16.jpg')}
                 />
             </div>
             <Footer />

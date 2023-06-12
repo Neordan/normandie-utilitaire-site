@@ -1,0 +1,61 @@
+.location-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 80%;
+    margin: 20px auto 35px auto;
+    text-decoration: none;
+  
+    .location-card-1, .location-card-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 312px;
+      width: 100%;
+      margin: auto;
+      border: 3px solid #5A5B57;
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+  
+      .location-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 240px;
+  
+        img {
+          text-align: center;
+          width: 100%;
+          height: 95%;
+          background-size: contain;
+          position: relative;
+          z-index: -1;
+        }
+      }
+    }
+  
+    .location-under-card {
+      font-family: "Raleway";
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      width: 100%;
+      border-top: 3px solid #5A5B57;
+      border-radius: 0 0 7px 7px;
+      padding: 7px;
+      background: #e48156d4;
+      color: #fff;
+  
+      p:first-child {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+    }
+  }
+  
+
+
