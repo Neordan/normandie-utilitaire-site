@@ -87,8 +87,8 @@ a {
 }
 .title h2 {
   font-family: "raleway";
-  font-size: 1.7rem;
-  letter-spacing: 5px;
+  font-size: 1.9rem;
+  letter-spacing: 6px;
   color: #E48156;
   text-align: center;
 }
@@ -166,7 +166,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 92%;
+  width: 80%;
   margin: 20px auto 35px auto;
   text-decoration: none;
   transition: transform 0.5s ease;
