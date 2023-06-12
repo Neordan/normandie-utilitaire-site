@@ -1,0 +1,37 @@
+.description {
+    width: 92%;
+    margin: auto;
+    font-family: "Raleway";
+    
+    
+    h1 {
+        font-size: 1.4rem;
+        text-align: justify;
+        font-weight: 100;
+        margin-bottom: 10px;
+
+        span {
+            color: #50994F;
+            font-weight:bold;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: justify;
+        color: #50994F;
+        margin: 15px auto;
+        text-align: justify;
+    }
+
+    p {
+        text-align: justify;
+        margin: 8px auto;
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
