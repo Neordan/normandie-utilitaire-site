@@ -11,7 +11,7 @@ const Location = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="location" image={require("../assets/img/icons/camion (1).png")} alt="Icône de camion" />
+            <TitlePage title="Location" image={require("../assets/img/icons/camion (1).png")} alt="Icône de camion" />
             <div className="container">
                 <LocationCard
                     link="/camion"

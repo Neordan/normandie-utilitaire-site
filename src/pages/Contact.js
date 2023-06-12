@@ -12,7 +12,7 @@ const Contact = () => {
             <Logo />
             <Navigation />
             <div className="title-contact">
-                <TitlePage title="contact" image={require('../assets/img/icons/e-mail.png')} alt="Icône d'un e-mail" />
+                <TitlePage title="Contact" image={require('../assets/img/icons/e-mail.png')} alt="Icône d'un e-mail" />
             </div>
             <ContactForm />
 

@@ -37,7 +37,7 @@ const MaintenancePage = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="vidange & révision" image={require('../assets/img/icons/goutte-de-liquide.png')} alt="Icône de goutte d'huile" />
+            <TitlePage title="Vidange & révision" image={require('../assets/img/icons/goutte-de-liquide.png')} alt="Icône de goutte d'huile" />
             <form action="">
                 <div>
                     <input type="checkbox" name="simple-maintenance" id="simple-maintenance" />

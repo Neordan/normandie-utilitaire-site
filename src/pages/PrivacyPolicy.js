@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="politique de confidentialité" image={require('../assets/img/icons/politique-de-confidentialite.png')} alt="Icône d'un contrat" />
+            <TitlePage title="Politique de confidentialité" image={require('../assets/img/icons/politique-de-confidentialite.png')} alt="Icône d'un contrat" />
             <div className="privacy-policy">
                 <p>
                     Dernière mise à jour : [date de la dernière mise à jour]

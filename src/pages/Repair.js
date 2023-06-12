@@ -10,7 +10,7 @@ const Repair = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="réparation" image={require('../assets/img/icons/pneu (1).png')} alt="Icône de pneus" />
+            <TitlePage title="Réparation" image={require('../assets/img/icons/pneu (1).png')} alt="Icône de pneus" />
             <RepairCard link="/tire" title="pneu" />
             <RepairCard link="/maintenance" title="vidange & révision" />
             <RepairCard link="/mechanics" title="mécanique & entretien" />

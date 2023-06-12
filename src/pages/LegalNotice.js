@@ -9,7 +9,7 @@ const LegalNotice = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="mentions légales" image={require('../assets/img/icons/info.png')} alt="Icône information" />
+            <TitlePage title="Mentions légales" image={require('../assets/img/icons/info.png')} alt="Icône information" />
             <div className="legal-notice">
                 <p>
                     Le présent site web est édité par <span>NORMANDIE UTILITAIRE</span>, une société enregistrée au [Registre du Commerce et des Sociétés] sous le numéro [numéro d'enregistrement], dont le siège social est situé au <span>31 rue Jacquard, 76300 Sotteville-les-Rouen</span>.

@@ -9,7 +9,7 @@ const TirePage = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="pneumatiques" image={require('../assets/img/icons/pneu (1).png')} alt="Icône de pneus" />
+            <TitlePage title="Pneumatiques" image={require('../assets/img/icons/pneu (1).png')} alt="Icône de pneus" />
             <form action="" method="post">
                 <label htmlFor="width">Largeur</label>
                 <select name="width" id=""></select>

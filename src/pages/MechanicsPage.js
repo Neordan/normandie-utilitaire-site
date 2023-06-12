@@ -30,7 +30,7 @@ const MechanicsPage = () => {
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="Mechanics & Maintenance" image={require('../assets/img/icons/outils.png')} alt="Icône d'outils" />
+            <TitlePage title="Mécanique & entretien" image={require('../assets/img/icons/outils.png')} alt="Icône d'outils" />
             
             <form>
                 <div className="form-group">
