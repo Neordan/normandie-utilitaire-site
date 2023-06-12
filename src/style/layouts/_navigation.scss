@@ -1,7 +1,11 @@
 .navigation {
+    position: fixed;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 167px;
+    top: 167px;
+    background: #fff;
+    width: 100%;
+    
 
     .nav, .nav-active {
         width: 30%;
