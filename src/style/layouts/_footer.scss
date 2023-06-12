@@ -1,0 +1,39 @@
+.footer {
+    background : #5A5B57;
+    padding: 20px;
+    text-align: center;
+
+    .footer-link {
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        margin-bottom: 20px;
+
+        .nav-footer {
+            font-family: "Raleway";
+        color: #E48156;
+        font-weight: 600;
+        letter-spacing: 2px;
+        transition: hover 0.2s ease;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+        .space {
+            height: 30px;
+            width: 2px;
+            background: #E48156;
+        }
+    }
+    
+    img {
+        width: 28%;
+    }
+
+    p {
+        font-family: "Raleway";
+        color: #fff;
+       font-size: 0.7rem;
+    }
+}

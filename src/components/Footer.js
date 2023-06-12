@@ -5,13 +5,15 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-link">
-                <NavLink NavLink to="/contact" className={(nav) => (nav.isActive ? "nav-active-footer" : "")}>
+                <NavLink NavLink to="/contact" className={ "nav-footer"}>
                     <li>Contactez-nous</li>
                 </NavLink>
-                <NavLink to="/mentions_legales" className={(nav) => (nav.isActive ? "nav-active-footer" : "")}>
+                <div className="space"></div>
+                <NavLink to="/mentions_legales" className={ "nav-footer"}>
                     <li>Mentions légales</li>
                 </NavLink>
-                <NavLink to="/politique_de_confidentialite" className={(nav) => (nav.isActive ? "nav-active-footer" : "")}>
+                <div className="space"></div>
+                <NavLink to="/politique_de_confidentialite" className={ "nav-footer"}>
                     <li>Politique de confidentialité</li>
                 </NavLink>
             </div>
