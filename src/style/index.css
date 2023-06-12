@@ -299,9 +299,122 @@ a {
   width: 90%;
   max-width: 600px;
 }
-.header-truck p:first-child {
+.header-truck .type {
   font-family: "Raleway";
-  font-size: 1.3rem;
+  font-size: 2.3rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  margin-top: 15px;
+}
+.header-truck .model {
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: -5px;
+  letter-spacing: -1px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+.info .essence, .info .boite, .info .place {
+  min-width: 100px;
+  background: #C2DBC1;
+  color: #fff;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: "Raleway";
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.dimensions-group {
+  width: 80%;
+  margin: auto;
+  border: 2px solid #C2DBC1;
+  border-radius: 6px;
+  padding: 15px;
+  font-family: "Raleway";
+}
+.dimensions-group .dimension-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-align: center;
+}
+.dimensions-group .dimensions {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px auto;
+  font-size: 1.1rem;
+}
+.dimensions-group .dimensions .longueur, .dimensions-group .dimensions .largeur, .dimensions-group .dimensions .hauteur {
+  width: 30%;
+  max-width: 100px;
+  min-width: 65px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.date-choice {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.date-choice p {
+  font-family: "Raleway";
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-top: 20px;
+  margin: 20px auto;
+}
+.date-choice .continue {
+  background: rgba(228, 129, 86, 0.9450980392);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 32px;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  margin: 15px auto;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
+}
+
+form {
+  width: 100%;
+}
+form .date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-family: "Raleway";
+  margin-bottom: 25px;
+}
+form .date .date-debut, form .date .date-fin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 40%;
+}
+form .date .date-debut label, form .date .date-fin label {
+  font-size: 0.9rem;
+}
+form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
+  width: 100%;
+  border: 2px solid #50994F;
+  border-radius: 6px;
+  padding: 5px;
+  background: #C2DBC1;
 }/*# sourceMappingURL=index.css.map */

@@ -9,7 +9,7 @@ const TruckPage = () => {
             <Logo />
             <Navigation />
             <div className="header-truck">
-                <img src="" alt="" />
+                <img src={require("../assets/img/camions/CAMION12.jpg")} alt="Photo de camion" />
                 <p className="type">Utilitaire 12m³</p>
                 <p className="model">Fiat Ducato</p>
             </div>
@@ -25,7 +25,7 @@ const TruckPage = () => {
                 </div>
             </div>
             <div className="dimensions-group">
-                <p>Dimensions</p>
+                <p className="dimension-title">Dimensions</p>
                 <div className="dimensions">
                     <div className="longueur">
                         <p>Longueur : 4,07m</p>
@@ -40,14 +40,16 @@ const TruckPage = () => {
             </div>
             <div className="date-choice">
                 <p>Choisissez vos dates</p>
-                <form className="date">
-                    <div className="date-debut">
-                        <p>Date de début</p>
-                        <input type="date" />
-                    </div>
-                    <div className="date-fin">
-                        <p>Date de fin</p>
-                        <input type="date" />
+                <form method="">
+                    <div className="date">
+                        <div className="date-debut">
+                            <label htmlFor="start-date">Départ</label>
+                            <input type="date" id="start-date" />
+                        </div>
+                        <div className="date-fin">
+                            <label htmlFor="end-date">Arrivée</label>
+                            <input type="date" id="end-date" />
+                        </div>
                     </div>
                     <button className="continue">Continuer</button>
                 </form>
