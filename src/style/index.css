@@ -427,25 +427,37 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   flex: 1;
   width: 75%;
   margin: 0 auto 36px auto;
-  border: 3px solid #CBE0CA;
+  border: 4px solid #CBE0CA;
   border-radius: 15px;
   padding: 30px;
   font-family: "Raleway";
 }
 .tire-form label {
   font-size: 1.3rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .tire-form select {
   width: 60%;
   height: 40px;
   border-radius: 5px;
-  border: 1px solid #CBE0CA;
-  padding: 0 8px;
+  border: 2px solid #50994F;
+  background: rgba(203, 224, 202, 0.4196078431);
+  padding: 8px;
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
 .tire-form select:focus {
   outline: none;
   border: 1px solid #50994F;
+}
+.tire-form .validate {
+  margin-top: 12px;
+  width: 40%;
+  border: none;
+  background: #E48156;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
 }/*# sourceMappingURL=index.css.map */
