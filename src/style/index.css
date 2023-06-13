@@ -433,12 +433,13 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   font-family: "Raleway";
 }
 .tire-form label {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
 }
 .tire-form select {
   width: 60%;
   height: 40px;
+  max-width: 320px;
   border-radius: 5px;
   border: 2px solid #50994F;
   background: rgba(203, 224, 202, 0.4196078431);
@@ -453,11 +454,20 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 .tire-form .validate {
   margin-top: 12px;
   width: 40%;
+  max-width: 200px;
   border: none;
-  background: #E48156;
   color: #fff;
+  background: #E48156;
   text-transform: uppercase;
   font-size: 1.2rem;
   padding: 12px;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.tire-form .validate:hover {
+  background: rgba(228, 129, 86, 0.9176470588);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }/*# sourceMappingURL=index.css.map */
