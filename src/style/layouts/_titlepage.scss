@@ -7,6 +7,18 @@
     margin: 280px 0 35px 0;
     gap: 3%;
     padding: 0 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 160%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 5px;
+        background: #E48156;
+        border-radius: 3px;
+    }
     
     img {
         width: 50px;

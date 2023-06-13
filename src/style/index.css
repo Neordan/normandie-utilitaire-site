@@ -43,6 +43,7 @@ a {
   justify-content: space-evenly;
   top: 167px;
   background: #fff;
+  z-index: 5;
   width: 100%;
 }
 .navigation .nav, .navigation .nav-active {
@@ -85,6 +86,17 @@ a {
   gap: 3%;
   padding: 0 10px;
 }
+.title::after {
+  content: "";
+  position: absolute;
+  top: 160%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 5px;
+  background: #E48156;
+  border-radius: 3px;
+}
 .title img {
   width: 50px;
 }
@@ -100,7 +112,7 @@ a {
 
 .description {
   width: 92%;
-  margin: auto;
+  margin: 70px auto 40px auto;
   font-family: "Raleway";
 }
 .description h1 {
@@ -174,7 +186,7 @@ a {
   align-items: center;
   gap: 15px;
   width: 80%;
-  margin: 20px auto 35px auto;
+  margin: 70px auto 50px auto;
   text-decoration: none;
   transition: transform 0.5s ease;
 }
@@ -244,7 +256,7 @@ a {
   align-items: center;
   gap: 18px;
   width: 80%;
-  margin: 20px auto 35px auto;
+  margin: 70px auto 35px auto;
   text-decoration: none;
 }
 .location-cards .location-card-1, .location-cards .location-card-2 {
@@ -426,7 +438,7 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   justify-content: center;
   flex: 1;
   width: 75%;
-  margin: 0 auto 36px auto;
+  margin: 80px auto 36px auto;
   border: 4px solid #CBE0CA;
   border-radius: 15px;
   padding: 30px;
