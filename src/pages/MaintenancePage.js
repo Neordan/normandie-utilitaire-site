@@ -38,50 +38,66 @@ const MaintenancePage = () => {
             <Logo />
             <Navigation />
             <TitlePage title="Vidange & révision" image={require('../assets/img/icons/goutte-de-liquide.png')} alt="Icône de goutte d'huile" />
-            <form action="">
-                <div>
-                    <input type="checkbox" name="simple-maintenance" id="simple-maintenance" />
-                    <label htmlFor="simple-maintenance">Vidange simple</label>
-                    <button type="button" onClick={(e) => handleButtonClick(e, 'simple-maintenance')}>
-                        {showDetails['simple-maintenance'] ? 'Masquer les informations' : '+ d\'informations'}
-                    </button>
-                    {showDetails['simple-maintenance'] && (
-                        <div>
-                            <p>{detailedInformation['simple-maintenance']}</p>
-                        </div>
-                    )}
-                </div>
+            <form className="maintenance-form" action="">
+                <div className="inputs-group">
+                    <div>
+                        <input type="checkbox" name="simple-maintenance" id="simple-maintenance" />
+                        <div className="info-label">
+                            <label htmlFor="simple-maintenance">Vidange simple</label>
+                            <div className="info-btn">
+                                <button type="button" onClick={(e) => handleButtonClick(e, 'simple-maintenance')}>
+                                    {showDetails['simple-maintenance'] ? 'Masquer les informations' : '+ d\'informations'}
+                                </button>
+                                </div>
+                                </div>
+                                </div>
+                                {showDetails['simple-maintenance'] && (
+                                    <div className="detail">
+                                        <p>{detailedInformation['simple-maintenance']}</p>
+                                    </div>
+                                )}
 
-                <div>
-                    <input type="checkbox" name="complete-maintenance" id="complete-maintenance" />
-                    <label htmlFor="complete-maintenance">Vidange complète</label>
-                    <button type="button" onClick={(e) => handleButtonClick(e, 'complete-maintenance')}>
-                        {showDetails['complete-maintenance'] ? 'Masquer les informations' : '+ d\'informations'}
-                    </button>
-                    {showDetails['complete-maintenance'] && (
-                        <div>
-                            <p>{detailedInformation['complete-maintenance']}</p>
-                        </div>
-                    )}
-                </div>
+                    <div>
+                        <input type="checkbox" name="complete-maintenance" id="complete-maintenance" />
+                        <div className="info-label">
 
-                <div>
-                    <input type="checkbox" name="revision" id="revision" />
-                    <label htmlFor="revision">Révision</label>
-                    <button type="button" onClick={(e) => handleButtonClick(e, 'revision')}>
-                        {showDetails['revision'] ? 'Masquer les informations' : '+ d\'informations'}
-                    </button>
-                    {showDetails['revision'] && (
-                        <div>
-                            <p>{detailedInformation['revision']}</p>
+                            <label htmlFor="complete-maintenance">Vidange complète</label>
+                            <div className="info-btn">
+                                <button type="button" onClick={(e) => handleButtonClick(e, 'complete-maintenance')}>
+                                    {showDetails['complete-maintenance'] ? 'Masquer les informations' : '+ d\'informations'}
+                                </button>
+                                </div>
+                            </div>
                         </div>
-                    )}
+                                {showDetails['complete-maintenance'] && (
+                                    <div className="detail">
+                                        <p>{detailedInformation['complete-maintenance']}</p>
+                                    </div>
+                                )}
+
+                    <div>
+                        <input type="checkbox" name="revision" id="revision" />
+                        <div className="info-label">
+                            <label htmlFor="revision">Révision</label>
+                            <div className="info-btn">
+                                <button type="button" onClick={(e) => handleButtonClick(e, 'revision')}>
+                                    {showDetails['revision'] ? 'Masquer les informations' : '+ d\'informations'}
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                                {showDetails['revision'] && (
+                                    <div className="detail">
+                                        <p>{detailedInformation['revision']}</p>
+                                    </div>
+                                )}
+
                 </div>
 
                 <button className="validate">valider</button>
-            </form>
+            </form >
             <Footer />
-        </div>
+        </div >
     );
 };
 

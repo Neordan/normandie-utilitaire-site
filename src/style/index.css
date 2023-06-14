@@ -34,6 +34,7 @@ a {
 }
 .logo img {
   width: 80%;
+  max-width: 700px;
   margin: 9px auto 0 auto;
 }
 
@@ -479,6 +480,99 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .tire-form .validate:hover {
+  background: rgba(228, 129, 86, 0.9176470588);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.maintenance-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  min-width: 313px;
+  max-width: 470px;
+  margin: 70px auto 35px auto;
+  border: 4px solid #CBE0CA;
+  border-radius: 15px;
+  padding: 20px;
+  padding-bottom: 35px;
+}
+.maintenance-form .inputs-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.maintenance-form .inputs-group > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.maintenance-form .inputs-group > div .info-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+}
+.maintenance-form .inputs-group > div input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  border: 2px solid rgba(80, 153, 79, 0.5647058824);
+  border-radius: 4px;
+  margin-right: 25px;
+  background-color: rgba(203, 224, 202, 0.3254901961);
+  cursor: pointer;
+}
+.maintenance-form .inputs-group > div input[type=checkbox]:checked {
+  background-color: #50994F;
+}
+.maintenance-form .inputs-group > div label {
+  font-family: "Raleway";
+  font-size: 1.1rem;
+}
+.maintenance-form .inputs-group > div button {
+  text-align: end;
+  background-color: transparent;
+  border: none;
+  color: #50994F;
+  cursor: pointer;
+  margin-left: 30px;
+  font-family: "Raleway";
+}
+.maintenance-form .inputs-group .detail {
+  background: #50994F;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Raleway";
+  font-size: 0.8rem;
+  text-align: center;
+  margin-left: -35px;
+}
+.maintenance-form .validate {
+  margin-top: 12px;
+  width: 40%;
+  max-width: 200px;
+  border: none;
+  color: #fff;
+  background: #E48156;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.maintenance-form .validate:hover {
   background: rgba(228, 129, 86, 0.9176470588);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
