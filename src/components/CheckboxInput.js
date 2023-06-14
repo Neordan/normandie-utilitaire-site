@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const CheckboxInput = ({ id, label, checked, onChange }) => {
-    const checkboxClass = `checkbox-input ${id}`;
+const CheckboxInput = ({ id, label, checked: initialChecked, onChange }) => {
+    const [checked, setChecked] = useState(initialChecked);
+
+    const handleInputChange = (event) => {
+        const { checked } = event.target;
+        setChecked(checked);
+        onChange(id, checked);
+    };
+
     return (
-        <div className={checkboxClass}>
+        <div className={`checkbox-input ${id}`}>
             <input
                 type="checkbox"
                 id={id}
                 name={id}
                 checked={checked}
-                onChange={onChange}
+                onChange={handleInputChange}
             />
             <label htmlFor={id}>{label}</label>
         </div>

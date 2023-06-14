@@ -578,56 +578,81 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   transform: translateY(-2px);
 }
 
-.checkbox-input {
+.mechanics-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 70px auto 30px auto;
+}
+.mechanics-form .validate {
+  width: 40%;
+  max-width: 200px;
+  border: none;
+  color: #fff;
+  background: #E48156;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.mechanics-form .validate:hover {
+  background: rgba(228, 129, 86, 0.9176470588);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+.mechanics-form .checkbox-input {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.form-group {
+.mechanics-form .form-group {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 70px auto 20px auto;
   width: 80%;
 }
-.form-group .checkbox-input {
+.mechanics-form .form-group .checkbox-input {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.form-group .checkbox-input input[type=checkbox] {
+.mechanics-form .form-group .checkbox-input input[type=checkbox] {
   display: none;
 }
-.form-group .checkbox-input.freinage input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.freinage input[type=checkbox] + label {
   background: url(../assets/img/images-input/freinage.jpg) center/cover;
 }
-.form-group .checkbox-input.batterie input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.batterie input[type=checkbox] + label {
   background: url(../assets/img/images-input/batterie.jpg) center/cover;
 }
-.form-group .checkbox-input.suspension input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.suspension input[type=checkbox] + label {
   background: url(../assets/img/images-input/suspension.jpg) center/cover;
 }
-.form-group .checkbox-input.courroie input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.courroie input[type=checkbox] + label {
   background: url(../assets/img/images-input/courroie.jpg) center/cover;
 }
-.form-group .checkbox-input.eclairage input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.eclairage input[type=checkbox] + label {
   background: url(../assets/img/images-input/eclairage.jpg) center/cover;
 }
-.form-group .checkbox-input.carrosserie input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.carrosserie input[type=checkbox] + label {
   background: url(../assets/img/images-input/carrosserie.jpg) center/cover;
 }
-.form-group .checkbox-input.transmission input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.transmission input[type=checkbox] + label {
   background: url(../assets/img/images-input/transmission.jpg) center/cover;
 }
-.form-group .checkbox-input.moteur input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.moteur input[type=checkbox] + label {
   background: url(../assets/img/images-input/motorisation.jpg) center/cover;
 }
-.form-group .checkbox-input.echappement input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input.echappement input[type=checkbox] + label {
   background: url(../assets/img/images-input/echappement.jpg) center/cover;
 }
-.form-group .checkbox-input input[type=checkbox] + label {
+.mechanics-form .form-group .checkbox-input input[type=checkbox] + label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -642,12 +667,12 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   position: relative;
   z-index: 1;
 }
-.form-group .checkbox-input label {
+.mechanics-form .form-group .checkbox-input label {
   cursor: pointer;
   position: relative;
   display: inline-block;
 }
-.form-group .checkbox-input label::before {
+.mechanics-form .form-group .checkbox-input label::before {
   content: "";
   display: block;
   width: 100%;
@@ -659,13 +684,26 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   border-radius: 6px;
   z-index: -1;
 }
-.form-group .checkbox-input input[type=checkbox]:checked + label {
-  background: red;
+.mechanics-form .form-group .checkbox-input input[type=checkbox]:checked + label {
+  background: rgba(80, 153, 79, 0.9215686275);
+  box-shadow: inset 2px 2px 12px rgba(0, 0, 0, 0.4235294118);
 }
-.form-group .checkbox-input label {
+.mechanics-form .form-group .checkbox-input label {
   cursor: pointer;
   font-family: "Raleway";
-  font-weight: 900;
+  font-weight: bold;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+}
+.mechanics-form .form-group .checkbox-input label .label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.mechanics-form .form-group .checkbox-input label .label .separator {
+  width: 90%;
+  margin: auto;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #fff;
 }/*# sourceMappingURL=index.css.map */
