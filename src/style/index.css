@@ -576,4 +576,70 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   background: rgba(228, 129, 86, 0.9176470588);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+}
+
+.checkbox-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 70px auto 20px auto;
+  width: 80%;
+}
+.form-group .checkbox-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-group .checkbox-input input[type=checkbox] {
+  display: none;
+}
+.form-group .checkbox-input input[type=checkbox] + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  background: url(../assets/img/images-input/batterie.jpg) center/cover;
+  height: 105px;
+  width: 230px;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 4px solid #50994F;
+  position: relative; /* Ajout de cette ligne */
+  z-index: 1; /* Ajout de cette ligne */
+}
+.form-group .checkbox-input label {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+.form-group .checkbox-input label::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(80, 153, 79, 0.6274509804);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  z-index: -1;
+}
+.form-group .checkbox-input input[type=checkbox]:checked + label {
+  background: red;
+}
+.form-group .checkbox-input label {
+  cursor: pointer;
+  font-family: "Raleway";
+  font-weight: 900;
+  color: #fff;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=index.css.map */

@@ -26,99 +26,83 @@ const MechanicsPage = () => {
         }));
     };
 
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        // Logique pour traiter le formulaire ici
+    };
+
     return (
         <div>
-            <Logo />
-            <Navigation />
-            <TitlePage title="Mécanique & entretien" image={require('../assets/img/icons/outils.png')} alt="Icône d'outils" />
-            
-            <form>
-                <div className="form-group">
+        <Logo />
+        <Navigation />
+        <TitlePage title="Mécanique & entretien" image={require('../assets/img/icons/outils.png')} alt="Icône d'outils" />
+        
+        <form className="mechanics-form" onSubmit={handleFormSubmit}>
+            <div className="form-group">
                 <CheckboxInput
-                    idRelation="freinage"
+                    className="freinage"
                     id="freinage"
                     label="Freinage"
-                    imageSrc={require('../assets/img/images-input/freinage.jpg')}
-                    alt="Photo d'un frein"
                     checked={formState.brakes}
                     onChange={handleInputChange}
                 />
 
                 <CheckboxInput
-                    idRelation="batterie"
                     id="batterie"
-                    label="Batterie/Démarrage"
-                    imageSrc={require('../assets/img/images-input/batterie.jpg')}
-                    alt="Photo d'une batterie"
+                    label="Batterie / Démarrage"
                     checked={formState.battery}
                     onChange={handleInputChange}
                 />
 
                 <CheckboxInput
-                    idRelation="suspension"
                     id="suspension"
-                    label="Direction/Suspension"
-                    imageSrc={require('../assets/img/images-input/suspension.jpg')}
-                    alt="Photo de suspension"
+                    label="Direction / Suspension"
                     checked={formState.suspension}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="courroie"
                     id="courroie"
-                    label="Courrie de distribution"
-                    imageSrc={require('../assets/img/images-input/courroie.jpg')}
-                    alt="Photo d'un engrenage"
+                    label="Courroie de distribution"
                     checked={formState.timingBelt}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="transmission"
                     id="transmission"
-                    label="Transmission/Embrayage"
-                    imageSrc={require('../assets/img/images-input/transmission.jpg')}
+                    label="Transmission / Embrayage"
                     alt="Photo d'un levier de vitesse"
                     checked={formState.transmission}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="echappement"
                     id="echappement"
                     label="Échappement"
-                    imageSrc={require('../assets/img/images-input/echappement.jpg')}
                     alt="Photo d'un échappement"
                     checked={formState.exhaust}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="moteur"
                     id="moteur"
                     label="Motorisation"
-                    imageSrc={require('../assets/img/images-input/motorisation.jpg')}
                     alt="Photo d'un moteur"
                     checked={formState.engine}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="eclairage"
                     id="eclairage"
                     label="Éclairage"
-                    imageSrc={require('../assets/img/images-input/eclairage.jpg')}
-                    alt="Photo d'un phare"
                     checked={formState.lighting}
                     onChange={handleInputChange}
                 />
                 <CheckboxInput
-                    idRelation="carrosserie"
-                    id="carrosserie"    
+                    id="carrosserie" 
                     label="Carrosserie"
-                    imageSrc={require('../assets/img/images-input/carrosserie.jpg')}
                     alt="Photo d'un homme s'occupant de la carroserie d'une voiture"
                     checked={formState.bodywork}
                     onChange={handleInputChange}
                 />
                 </div>
                 <button className="validate">valider</button>
+            
             </form>
             <Footer />
         </div>

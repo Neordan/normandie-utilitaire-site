@@ -1,18 +1,17 @@
 import React from 'react';
 
-const CheckboxInput = ({ idRelation, label, imageSrc, id, alt, checked, onChange }) => {
+const CheckboxInput = ({ id, label, checked, onChange }) => {
+    const checkboxClass = `checkbox-input ${id}`;
     return (
-        <div>
-            <label htmlFor={idRelation}>
-                <img src={imageSrc} alt={alt} />
-                {label}
-            </label>
+        <div className={checkboxClass}>
             <input
                 type="checkbox"
                 id={id}
+                name={id}
                 checked={checked}
                 onChange={onChange}
             />
+            <label htmlFor={id}>{label}</label>
         </div>
     );
 };
