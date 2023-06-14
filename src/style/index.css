@@ -600,6 +600,30 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 .form-group .checkbox-input input[type=checkbox] {
   display: none;
 }
+.form-group .checkbox-input .freinage input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/freinage.jpg);
+}
+.form-group .checkbox-input .batterie input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/batterie.jpg);
+}
+.form-group .checkbox-input .suspension input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/suspension.jpg);
+}
+.form-group .checkbox-input .courroie input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/courroie.jpg);
+}
+.form-group .checkbox-input .eclairage input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/eclairage.jpg);
+}
+.form-group .checkbox-input .carrosserie input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/carrosserie.jpg);
+}
+.form-group .checkbox-input .transmission input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/transmission.jpg);
+}
+.form-group .checkbox-input .motorisation input[type=checkbox] + label {
+  background-image: url(../assets/img/images-input/motorisation.jpg);
+}
 .form-group .checkbox-input input[type=checkbox] + label {
   display: flex;
   justify-content: center;

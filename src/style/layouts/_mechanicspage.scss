@@ -19,6 +19,21 @@
         input[type="checkbox"] {
             display: none; 
         }
+
+        @each $name, $image in (
+      freinage: "freinage.jpg",
+      batterie: "batterie.jpg",
+      suspension: "suspension.jpg",
+      courroie: "courroie.jpg",
+      eclairage: "eclairage.jpg",
+      carrosserie: "carrosserie.jpg",
+      transmission: "transmission.jpg",
+      motorisation: "motorisation.jpg"
+    ) {
+      .#{$name} input[type="checkbox"] + label {
+        background-image: url(../assets/img/images-input/#{$image});
+      }
+    }
         
         input[type="checkbox"] + label {
             display: flex;
