@@ -2,88 +2,88 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.form-group {
+  }
+  
+  .form-group {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 70px auto 20px auto;
     width: 80%;
-
+  
     .checkbox-input {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        input[type="checkbox"] {
-            display: none; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      input[type="checkbox"] {
+        display: none;
+      }
+  
+      // Génération des classes et des images
+      @each $name, $image in (
+        freinage: "freinage.jpg",
+        batterie: "batterie.jpg",
+        suspension: "suspension.jpg",
+        courroie: "courroie.jpg",
+        eclairage: "eclairage.jpg",
+        carrosserie: "carrosserie.jpg",
+        transmission: "transmission.jpg",
+        moteur: "motorisation.jpg",
+        echappement : "echappement.jpg"
+      ) {
+        &.#{$name} input[type="checkbox"] + label {
+          background: url(../assets/img/images-input/#{$image}) center/cover;
         }
-
-        @each $name, $image in (
-      freinage: "freinage.jpg",
-      batterie: "batterie.jpg",
-      suspension: "suspension.jpg",
-      courroie: "courroie.jpg",
-      eclairage: "eclairage.jpg",
-      carrosserie: "carrosserie.jpg",
-      transmission: "transmission.jpg",
-      motorisation: "motorisation.jpg"
-    ) {
-      .#{$name} input[type="checkbox"] + label {
-        background-image: url(../assets/img/images-input/#{$image});
+      }
+  
+      input[type="checkbox"] + label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        height: 90px;
+        width: 250px;
+        margin: 10px;
+        padding: 8px;
+        border-radius: 10px;
+        border: 4px solid #50994F;
+        position: relative;
+        z-index: 1;
+      }
+  
+      label {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+  
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: #50994fa0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 6px;
+          z-index: -1;
+        }
+      }
+  
+      input[type="checkbox"]:checked + label {
+        background: red;
+      }
+  
+      label {
+        cursor: pointer;
+        font-family: "Raleway";
+        font-weight: 900;
+        color: #fff;
+        font-size: 1.4rem;
       }
     }
-        
-        input[type="checkbox"] + label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0;
-            background: url(../assets/img/images-input/batterie.jpg) center/cover;
-            height: 105px;
-            width: 230px;
-            margin: 10px;
-            padding: 8px;
-            border-radius: 10px;
-            border: 4px solid #50994F;
-            position: relative; /* Ajout de cette ligne */
-        z-index: 1; /* Ajout de cette ligne */
-        }
-        
-        label {
-            cursor: pointer;
-            position: relative;
-            display: inline-block;
-            
-            &::before {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 100%;
-                background: #50994fa0;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 6px;
-                z-index: -1;
-            }
-        }
-        
-        input[type="checkbox"]:checked + label  {
-            background: red;
-        }
-
-        label {
-            cursor: pointer;
-            font-family: "Raleway";
-            font-weight: 900;
-            color: #fff;
-            font-size: 1.4rem;
-
-        }
-            
-    }
-} 
-
+  }
+  

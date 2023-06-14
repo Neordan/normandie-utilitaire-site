@@ -600,29 +600,32 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 .form-group .checkbox-input input[type=checkbox] {
   display: none;
 }
-.form-group .checkbox-input .freinage input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/freinage.jpg);
+.form-group .checkbox-input.freinage input[type=checkbox] + label {
+  background: url(../assets/img/images-input/freinage.jpg) center/cover;
 }
-.form-group .checkbox-input .batterie input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/batterie.jpg);
+.form-group .checkbox-input.batterie input[type=checkbox] + label {
+  background: url(../assets/img/images-input/batterie.jpg) center/cover;
 }
-.form-group .checkbox-input .suspension input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/suspension.jpg);
+.form-group .checkbox-input.suspension input[type=checkbox] + label {
+  background: url(../assets/img/images-input/suspension.jpg) center/cover;
 }
-.form-group .checkbox-input .courroie input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/courroie.jpg);
+.form-group .checkbox-input.courroie input[type=checkbox] + label {
+  background: url(../assets/img/images-input/courroie.jpg) center/cover;
 }
-.form-group .checkbox-input .eclairage input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/eclairage.jpg);
+.form-group .checkbox-input.eclairage input[type=checkbox] + label {
+  background: url(../assets/img/images-input/eclairage.jpg) center/cover;
 }
-.form-group .checkbox-input .carrosserie input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/carrosserie.jpg);
+.form-group .checkbox-input.carrosserie input[type=checkbox] + label {
+  background: url(../assets/img/images-input/carrosserie.jpg) center/cover;
 }
-.form-group .checkbox-input .transmission input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/transmission.jpg);
+.form-group .checkbox-input.transmission input[type=checkbox] + label {
+  background: url(../assets/img/images-input/transmission.jpg) center/cover;
 }
-.form-group .checkbox-input .motorisation input[type=checkbox] + label {
-  background-image: url(../assets/img/images-input/motorisation.jpg);
+.form-group .checkbox-input.moteur input[type=checkbox] + label {
+  background: url(../assets/img/images-input/motorisation.jpg) center/cover;
+}
+.form-group .checkbox-input.echappement input[type=checkbox] + label {
+  background: url(../assets/img/images-input/echappement.jpg) center/cover;
 }
 .form-group .checkbox-input input[type=checkbox] + label {
   display: flex;
@@ -630,15 +633,14 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   align-items: center;
   text-align: center;
   padding: 0;
-  background: url(../assets/img/images-input/batterie.jpg) center/cover;
-  height: 105px;
-  width: 230px;
+  height: 90px;
+  width: 250px;
   margin: 10px;
   padding: 8px;
   border-radius: 10px;
   border: 4px solid #50994F;
-  position: relative; /* Ajout de cette ligne */
-  z-index: 1; /* Ajout de cette ligne */
+  position: relative;
+  z-index: 1;
 }
 .form-group .checkbox-input label {
   cursor: pointer;

@@ -28,7 +28,6 @@ const MechanicsPage = () => {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        // Logique pour traiter le formulaire ici
     };
 
     return (
