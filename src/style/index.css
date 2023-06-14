@@ -706,4 +706,35 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   height: 3px;
   border-radius: 3px;
   background-color: #fff;
+}
+
+.legal-notice {
+  width: 90%;
+  margin: 70px auto 30px auto;
+  text-align: justify;
+}
+.legal-notice h5 {
+  font-size: 1.4rem;
+  margin: 20px auto;
+  font-family: "Rubik";
+}
+.legal-notice p {
+  font-family: "Raleway";
+}
+.legal-notice p span {
+  font-weight: bold;
+}
+
+.privacy-policy {
+  margin: 80px auto 30px auto;
+  width: 90%;
+  text-align: justify;
+}
+.privacy-policy p {
+  font-family: "Raleway";
+}
+.privacy-policy h5 {
+  font-size: 1.4rem;
+  margin: 20px auto;
+  font-family: "Rubik";
 }/*# sourceMappingURL=index.css.map */

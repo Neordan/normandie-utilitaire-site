@@ -19,12 +19,11 @@ const LegalNotice = () => {
                 <h5>
                     Hébergeur du site :
                 </h5>
-                <div className="lodging">
                     <p>[Nom de l'hébergeur]</p>
                     <p>[Adresse de l'hébergeur]</p>
                     <p>[Téléphone de l'hébergeur]</p>
                     <p>[E-mail de l'hébergeur]</p>
-                </div>
+            
                 <h5>
                     Propriété intellectuelle :
                 </h5>
