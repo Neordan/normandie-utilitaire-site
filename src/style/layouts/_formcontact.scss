@@ -1,0 +1,94 @@
+.form-container {
+    margin: 70px auto 30px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    p {
+      font-family: "Raleway";
+      text-align: center;
+    }
+  
+    form {
+      width: 90%;
+      margin-top: 56px;
+  
+      &::before {
+        position: absolute;
+        content: "............";
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%);
+      }
+  
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+  
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+  
+        .message {
+            grid-column: 1 / 3;
+        }
+      }
+  
+      label {
+        font-family: "Rubik";
+        font-size: 1.2rem;
+      }
+  
+      input,
+      textarea {
+        background: #dededd;
+        border: 2px solid #5a5b57;
+        border-radius: 6px;
+        margin-top: 10px;
+        padding: 10px;
+
+        &:focus {
+            outline: none;
+            border: 3px solid #50994F;
+        }
+
+        &::placeholder {
+            font-family: "Rubik";
+            font-size: 1.2rem;
+        }
+      }
+
+      input {
+        height: 40px;
+        width: 85%;
+      }
+
+      textarea {
+        width: 95%;
+        height: 150px;
+        resize: none;
+      }
+  
+      button {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        width: 40%;
+        background: #e48156f1;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 32px;
+        font-family: "Raleway";
+        font-size: 1.2rem;
+        margin: 15px auto;
+        cursor: pointer;
+        box-shadow: 1px 1px 10px #0000005c;
+      }
+    }
+  }
+  

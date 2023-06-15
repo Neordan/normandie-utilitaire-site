@@ -737,4 +737,91 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   font-size: 1.4rem;
   margin: 20px auto;
   font-family: "Rubik";
+}
+
+.form-container {
+  margin: 70px auto 30px auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container p {
+  font-family: "Raleway";
+  text-align: center;
+}
+.form-container form {
+  width: 90%;
+  margin-top: 56px;
+}
+.form-container form::before {
+  position: absolute;
+  content: "............";
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.form-container form .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.form-container form .container div {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form .container .message {
+  grid-column: 1/3;
+}
+.form-container form label {
+  font-family: "Rubik";
+  font-size: 1.2rem;
+}
+.form-container form input,
+.form-container form textarea {
+  background: #dededd;
+  border: 2px solid #5a5b57;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 10px;
+}
+.form-container form input:focus,
+.form-container form textarea:focus {
+  outline: none;
+  border: 3px solid #50994F;
+}
+.form-container form input::-moz-placeholder, .form-container form textarea::-moz-placeholder {
+  font-family: "Rubik";
+  font-size: 1.2rem;
+}
+.form-container form input::placeholder,
+.form-container form textarea::placeholder {
+  font-family: "Rubik";
+  font-size: 1.2rem;
+}
+.form-container form input {
+  height: 40px;
+  width: 85%;
+}
+.form-container form textarea {
+  width: 95%;
+  height: 150px;
+  resize: none;
+}
+.form-container form button {
+  grid-column: 1/span 2;
+  grid-row: 4;
+  width: 40%;
+  background: rgba(228, 129, 86, 0.9450980392);
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  margin: 15px auto;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
 }/*# sourceMappingURL=index.css.map */

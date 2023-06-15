@@ -54,14 +54,14 @@ const ContactForm = () => {
     };
 
     return (
-        <div>
+        <div className="form-container">
             <p>
                 Vous souhaitez nous contacter ?<br />
                 Vous souhaitez nous faire part d'une demande de devis ?<br />
                 Vous souhaitez nous faire part d'une demande de renseignements ?<br />
             </p>
             <form onSubmit={sendEmail}>
-                <div className='first-container'>
+                <div className="container">
                     <div>
                         <label htmlFor="firstName">Prénom:</label>
                         <input
@@ -69,6 +69,7 @@ const ContactForm = () => {
                             id="firstName"
                             name="firstName"
                             value={formData.firstName}
+                            placeholder="ex : Jean"
                             onChange={handleChange}
                             required
                         />
@@ -77,9 +78,11 @@ const ContactForm = () => {
                         <label htmlFor="lastName">Nom:</label>
                         <input
                             type="text"
+           
                             id="lastName"
                             name="lastName"
                             value={formData.lastName}
+                            placeholder="ex : Dupond"
                             onChange={handleChange}
                             required
                         />
@@ -91,6 +94,7 @@ const ContactForm = () => {
                             id="email"
                             name="email"
                             value={formData.email}
+                            placeholder="ex : jean.dupond@gmail.com"
                             onChange={handleChange}
                             required
                         />
@@ -102,22 +106,24 @@ const ContactForm = () => {
                             id="phoneNumber"
                             name="phoneNumber"
                             value={formData.phoneNumber}
+                            placeholder="ex : 06.00.00.00.00"
                             onChange={handleChange}
                             required
                         />
                     </div>
+                    <div className="message">
+                        <label htmlFor="message">Motif(s):</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder="Veuillez écrire votre demande ..."
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
                 </div>
-                <div>
-                    <label htmlFor="message">Motif(s):</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    ></textarea>
-                </div>
-                <button type="submit">Envoyer</button>
             </form>
         </div>
     );
