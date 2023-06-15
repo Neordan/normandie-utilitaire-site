@@ -739,13 +739,29 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   font-family: "Rubik";
 }
 
+.adress {
+  display: flex;
+  width: 82%;
+  margin: auto;
+}
+.adress .info-adress {
+  width: 90%;
+}
+
 .form-container {
-  margin: 70px auto 30px auto;
+  margin: 70px auto 90px auto;
   width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.form-container::after {
+  content: "............................................................................................................";
+  font-weight: 900;
+  top: 108%;
+  position: absolute;
+  margin: auto;
 }
 .form-container p {
   font-family: "Raleway";
@@ -753,19 +769,12 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 }
 .form-container form {
   width: 90%;
-  margin-top: 56px;
-}
-.form-container form::before {
-  position: absolute;
-  content: "............";
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%);
+  margin-top: 40px;
 }
 .form-container form .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 25px;
 }
 .form-container form .container div {
   display: flex;
@@ -776,7 +785,7 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 }
 .form-container form label {
   font-family: "Rubik";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .form-container form input,
 .form-container form textarea {
@@ -785,6 +794,8 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   border-radius: 6px;
   margin-top: 10px;
   padding: 10px;
+  font-family: "Raleway";
+  font-size: 1.2rem;
 }
 .form-container form input:focus,
 .form-container form textarea:focus {
@@ -802,10 +813,10 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 }
 .form-container form input {
   height: 40px;
-  width: 85%;
+  width: 100%;
 }
 .form-container form textarea {
-  width: 95%;
+  width: 100%;
   height: 150px;
   resize: none;
 }
