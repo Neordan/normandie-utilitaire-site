@@ -741,15 +741,36 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 
 .adress {
   display: flex;
-  width: 82%;
-  margin: auto;
+  width: 85%;
+  margin: 0 auto 40px auto;
 }
 .adress .info-adress {
   width: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-right: 130px;
+}
+.adress .info-adress p, .adress .info-adress a {
+  color: #000;
+  font-family: "Rubik";
+  font-size: 1.1rem;
+  padding-bottom: 6px;
+}
+.adress .info-adress p:nth-child(1), .adress .info-adress a:nth-child(1) {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.adress .info-adress a {
+  font-family: "Rubik";
+}
+.adress .info-adress a:hover {
+  color: #50994F;
 }
 
 .form-container {
-  margin: 70px auto 90px auto;
+  margin: 70px auto 30px auto;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -759,9 +780,7 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 .form-container::after {
   content: "............................................................................................................";
   font-weight: 900;
-  top: 108%;
-  position: absolute;
-  margin: auto;
+  margin: 15px auto;
 }
 .form-container p {
   font-family: "Raleway";

@@ -100,7 +100,7 @@ const ContactForm = () => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="phoneNumber">Numéro de téléphone:</label>
+                        <label htmlFor="phoneNumber">Téléphone:</label>
                         <input
                             type="tel"
                             id="phoneNumber"

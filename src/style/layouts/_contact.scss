@@ -1,9 +1,35 @@
 .adress {
     display: flex;
-    width: 82%;
-    margin: auto;
+    width: 85%;
+    margin: 0 auto 40px auto;
 
     .info-adress {
         width: 90%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-right: 130px;
+
+        p, a {
+            color: #000;
+            font-family: "Rubik";
+            font-size: 1.1rem;
+            padding-bottom: 6px;
+
+            &:nth-child(1) {
+                font-weight: 800;
+                font-size: 1.3rem;
+            }
+        }
+
+        a {
+            font-family: "Rubik";
+
+            &:hover {
+                color: #50994F;
+            }
+        }
+
     }
 }
