@@ -867,6 +867,19 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Assurez-vous que la modal est au premier plan */
+}
+
 .modal-repair {
   width: 75%;
   margin: auto;
@@ -912,7 +925,6 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   height: 100px;
   width: 100px;
   margin: 0 auto 20px auto;
-  border: 2px solid #5A5B57;
 }
 .modal-repair form button {
   background: #50994F;

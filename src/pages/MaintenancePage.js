@@ -16,6 +16,9 @@ const MaintenancePage = () => {
         revision: false
     });
 
+    // State pour gérer la visibilité de la modal
+    const [showModal, setShowModal] = useState(false);
+
     // Fonction pour basculer l'état d'une option
     const toggleOption = (option) => {
         if (selectedOptions.includes(option)) {
@@ -35,19 +38,24 @@ const MaintenancePage = () => {
         }));
     };
 
+    // Gestion de la soumission du formulaire
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        setShowModal(true); // Afficher la modal
+        console.log(selectedOptions);
+    };
+
+    // Fonction pour fermer la modal
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
     // Informations détaillées pour chaque option
     const detailedInformation = {
         'simple-maintenance': 'Informations détaillées sur la vidange simple',
         'complete-maintenance': 'Informations détaillées sur la vidange complète',
         revision: 'Informations détaillées sur la révision'
     };
-
-    // Gestion de la soumission du formulaire
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        console.log(selectedOptions);
-    };
-
     return (
         <div>
             <Logo />
@@ -57,7 +65,7 @@ const MaintenancePage = () => {
                 image={require('../assets/img/icons/goutte-de-liquide.png')}
                 alt="Icône de goutte d'huile"
             />
-            <ModalRepair selectedOptions={selectedOptions} toggleOption={toggleOption} />
+            {showModal && <ModalRepair selectedOptions={selectedOptions} closeModal={closeModal} />}
             <form className="maintenance-form" onSubmit={handleFormSubmit}>
                 <div className="inputs-group">
                     {/* Option : Vidange simple */}
