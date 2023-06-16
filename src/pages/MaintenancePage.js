@@ -86,7 +86,8 @@ const MaintenancePage = () => {
           </div>
 
           {/* Option : Vidange complète */}
-          <div>
+          <div className="input-top">
+            <div className="block-label">
             <input
               type="checkbox"
               name="complete-maintenance"
@@ -100,6 +101,7 @@ const MaintenancePage = () => {
                 <button type="button" onClick={() => toggleDetails('complete-maintenance')}>
                   {showDetails['complete-maintenance'] ? 'Masquer les informations' : "+ d'informations"}
                 </button>
+                </div>
               </div>
             </div>
             {/* Affichage des détails de la vidange complète */}
@@ -111,7 +113,8 @@ const MaintenancePage = () => {
           </div>
 
           {/* Option : Révision */}
-          <div>
+          <div className="input-top">
+            <div className="block-label">
             <input
               type="checkbox"
               name="revision"
@@ -125,6 +128,7 @@ const MaintenancePage = () => {
                 <button type="button" onClick={() => toggleDetails('revision')}>
                   {showDetails['revision'] ? 'Masquer les informations' : "+ d'informations"}
                 </button>
+              </div>
               </div>
             </div>
             {/* Affichage des détails de la révision */}
