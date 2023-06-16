@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ModalRepair = () => {
+const ModalRepair = ({ selectedOptions, toggleOption }) => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -54,7 +54,14 @@ const ModalRepair = () => {
                     />
                 </div>
                 <div className="info-appointment">
-
+                    <div className="tire"></div>
+                    <div className="maintenance">
+                        {/* Affichage des options sélectionnées */}
+                        {selectedOptions.map((option) => (
+                            <div key={option}>{option}</div>
+                        ))}
+                    </div>
+                    <div className="mechanics"></div>
                 </div>
                 <div className="block">
                     <label htmlFor="appointmentDate">Date de rendez-vous:</label>
