@@ -854,4 +854,71 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   margin: 15px auto;
   cursor: pointer;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
+}
+
+.modal-repair {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  border: 3px solid #5A5B57;
+  border-radius: 10px;
+  padding: 20px;
+  background: #B4B4B2;
+}
+.modal-repair h2 {
+  font-family: "Rubik";
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.modal-repair form {
+  font-family: "Raleway";
+}
+.modal-repair form .personal {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-repair form .block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-repair form label {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+.modal-repair form input {
+  margin-bottom: 25px;
+  border: 2px solid #50994F;
+  border-radius: 5px;
+  padding: 5px;
+}
+.modal-repair form input[type=tel], .modal-repair form input[type=email], .modal-repair form input[type=date] {
+  width: 40%;
+}
+.modal-repair form .info-appointment {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto 20px auto;
+  border: 2px solid #5A5B57;
+}
+.modal-repair form button {
+  background: #50994F;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 35px;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px auto;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
+}
+.modal-repair form button:hover {
+  background: #50994F;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }/*# sourceMappingURL=index.css.map */

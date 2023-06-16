@@ -3,6 +3,7 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
 import Footer from '../components/Footer';
+import ModalRepair from '../components/ModalRepair';
 
 const TirePage = () => {
     return (
