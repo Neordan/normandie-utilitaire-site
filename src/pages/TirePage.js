@@ -3,7 +3,6 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
 import Footer from '../components/Footer';
-import ModalLocation from '../components/ModalLocation';
 
 const TirePage = () => {
     return (
@@ -25,7 +24,6 @@ const TirePage = () => {
                 <button className="validate">valider</button>
             </form>
             <Footer />
-            <ModalLocation />
         </div>
     );
 };

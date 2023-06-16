@@ -921,4 +921,99 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   background: #50994F;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
+}
+
+.modal-location {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  border: 3px solid #5A5B57;
+  border-radius: 10px;
+  padding: 20px;
+  background: #B4B4B2;
+}
+.modal-location h2 {
+  font-family: "Rubik";
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+.modal-location form {
+  font-family: "Raleway";
+}
+.modal-location form .personal {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-location form .personal .block {
+  width: 50%;
+}
+.modal-location form .personal .block input {
+  width: 80%;
+}
+.modal-location form .block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal-location form label {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+.modal-location form input {
+  margin-bottom: 25px;
+  border: 2px solid #50994F;
+  border-radius: 5px;
+  padding: 5px;
+}
+.modal-location form input[type=tel],
+.modal-location form input[type=email],
+.modal-location form input[type=date] {
+  width: 40%;
+}
+.modal-location form .location-appointment {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.modal-location form .location-appointment .block {
+  width: 48%;
+}
+.modal-location form .location-appointment .block [type=date] {
+  width: 70%;
+}
+.modal-location form .price {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.modal-location form .price h3 {
+  font-family: "Rubik";
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  text-decoration: underline;
+}
+.modal-location form .price span {
+  font-family: "Raleway";
+  font-size: 1.2rem;
+}
+.modal-location form button {
+  background: #50994F;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 35px;
+  font-family: "Raleway";
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 30px auto 10px auto;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3607843137);
+}
+.modal-location form button:hover {
+  background: #50994F;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }/*# sourceMappingURL=index.css.map */

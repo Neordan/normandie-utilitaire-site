@@ -1,0 +1,116 @@
+.modal-location {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid #5A5B57;
+    border-radius: 10px;
+    padding: 20px;
+    background: #B4B4B2;
+
+    h2 {
+        font-family: "Rubik";
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+    }
+
+    form {
+        font-family: "Raleway";
+
+        .personal {
+
+            display: flex;
+            justify-content: space-around;
+
+            .block {
+                width: 50%;
+
+                input {
+                    width: 80%;
+                }
+            }
+
+        }
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        input {
+            margin-bottom: 25px;
+            border: 2px solid #50994F;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"] {
+            width: 40%;
+        }
+
+        .location-appointment {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+                .block {
+                    width: 48%;
+
+
+                    [type="date"] {
+                        width: 70%;
+                    }
+
+                }
+        }
+
+        .price {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+
+            h3 {
+                font-family: "Rubik";
+                font-size: 1.3rem;
+                margin-bottom: 8px;
+                text-decoration: underline;
+            }
+
+            span {
+                font-family: "Raleway";
+                font-size: 1.2rem;
+            }
+        }
+
+        button {
+            background: #50994F;
+            color: #fff;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 35px;
+            font-family: "Raleway";
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 30px auto 10px auto;
+            cursor: pointer;
+            box-shadow: 1px 1px 10px #0000005c;
+
+            &:hover {
+                background: #50994F;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+                transform: translateY(-2px);
+            }
+
+        }
+    }
+}
