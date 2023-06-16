@@ -5,21 +5,28 @@ import TitlePage from '../components/TitlePage';
 import Footer from '../components/Footer';
 
 const MaintenancePage = () => {
+  // State pour stocker les options sélectionnées
   const [selectedOptions, setSelectedOptions] = useState([]);
+
+  // State pour gérer l'affichage des détails
   const [showDetails, setShowDetails] = useState({
     'simple-maintenance': false,
     'complete-maintenance': false,
     revision: false
   });
 
+  // Fonction pour basculer l'état d'une option
   const toggleOption = (option) => {
     if (selectedOptions.includes(option)) {
+      // Si l'option est déjà sélectionnée, la retirer
       setSelectedOptions((prevOptions) => prevOptions.filter((item) => item !== option));
     } else {
+      // Sinon, l'ajouter à la liste des options sélectionnées
       setSelectedOptions((prevOptions) => [...prevOptions, option]);
     }
   };
 
+  // Fonction pour basculer l'affichage des détails
   const toggleDetails = (option) => {
     setShowDetails((prevState) => ({
       ...prevState,
@@ -27,12 +34,14 @@ const MaintenancePage = () => {
     }));
   };
 
+  // Informations détaillées pour chaque option
   const detailedInformation = {
     'simple-maintenance': 'Informations détaillées sur la vidange simple',
     'complete-maintenance': 'Informations détaillées sur la vidange complète',
     revision: 'Informations détaillées sur la révision'
   };
 
+  // Gestion de la soumission du formulaire
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(selectedOptions);
@@ -49,6 +58,7 @@ const MaintenancePage = () => {
       />
       <form className="maintenance-form" onSubmit={handleFormSubmit}>
         <div className="inputs-group">
+          {/* Option : Vidange simple */}
           <div className="input-top">
             <div className="block-label">
               <input
@@ -67,6 +77,7 @@ const MaintenancePage = () => {
                 </div>
               </div>
             </div>
+            {/* Affichage des détails de la vidange simple */}
             {showDetails['simple-maintenance'] && (
               <div className="detail">
                 <p>{detailedInformation['simple-maintenance']}</p>
@@ -74,6 +85,7 @@ const MaintenancePage = () => {
             )}
           </div>
 
+          {/* Option : Vidange complète */}
           <div>
             <input
               type="checkbox"
@@ -90,6 +102,7 @@ const MaintenancePage = () => {
                 </button>
               </div>
             </div>
+            {/* Affichage des détails de la vidange complète */}
             {showDetails['complete-maintenance'] && (
               <div className="detail">
                 <p>{detailedInformation['complete-maintenance']}</p>
@@ -97,6 +110,7 @@ const MaintenancePage = () => {
             )}
           </div>
 
+          {/* Option : Révision */}
           <div>
             <input
               type="checkbox"
@@ -113,6 +127,7 @@ const MaintenancePage = () => {
                 </button>
               </div>
             </div>
+            {/* Affichage des détails de la révision */}
             {showDetails['revision'] && (
               <div className="detail">
                 <p>{detailedInformation['revision']}</p>
