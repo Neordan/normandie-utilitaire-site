@@ -507,6 +507,13 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   width: 90%;
   margin: auto;
 }
+.maintenance-form .inputs-group .input-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .maintenance-form .inputs-group > div {
   display: flex;
   justify-content: center;
@@ -534,6 +541,11 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
 .maintenance-form .inputs-group > div input[type=checkbox]:checked {
   background-color: #50994F;
 }
+.maintenance-form .inputs-group > div .block-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .maintenance-form .inputs-group > div label {
   font-family: "Raleway";
   font-size: 1.1rem;
@@ -548,14 +560,13 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   font-family: "Raleway";
 }
 .maintenance-form .inputs-group .detail {
-  background: #50994F;
+  background: rgba(80, 153, 79, 0.7921568627);
   padding: 8px;
   border-radius: 4px;
   color: #fff;
   font-family: "Raleway";
   font-size: 0.8rem;
   text-align: center;
-  margin-left: -35px;
 }
 .maintenance-form .validate {
   margin-top: 12px;
