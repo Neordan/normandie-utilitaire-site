@@ -4,11 +4,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Assurez-vous que la modal est au premier plan */
+    z-index: 999;
   }
 
 .modal-repair {
