@@ -4,51 +4,86 @@ import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
 import Footer from '../components/Footer';
+import ModalRepair from '../components/ModalRepair';
 
 const MechanicsPage = () => {
-    // État initial pour les cases à cocher
-    const [formState, setFormState] = useState({
-        freinage: false,
-        batterie: false,
-        suspension: false,
-        courroie: false,
-        transmission: false,
-        echappement: false,
-        moteur: false,
-        eclairage: false,
-        carrosserie: false
-    });
+  const [formState, setFormState] = useState({
+    freinage: false,
+    batterie: false,
+    suspension: false,
+    courroie: false,
+    transmission: false,
+    echappement: false,
+    moteur: false,
+    eclairage: false,
+    carrosserie: false
+  });
 
-    // Gestionnaire de changement pour les cases à cocher
-    const handleInputChange = (id, checked) => {
-        setFormState(prevState => ({
-            ...prevState,
-            [id]: checked
-        }));
-    };
+  const [showModal, setShowModal] = useState(false);
+  const [selectedMechanicsOptions, setSelectedMechanicsOptions] = useState([]);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [appointmentDate, setAppointmentDate] = useState('');
 
-    // Gestionnaire de clic sur le bouton "Continuer"
-    const handleContinueClick = () => {
-        console.log(formState);
-    };
+  const handleInputChange = (id, checked) => {
+    setFormState((prevState) => ({
+      ...prevState,
+      [id]: checked
+    }));
+  };
 
-    // Gestionnaire de soumission du formulaire
-    const handleFormSubmit = (event) => {
-        event.preventDefault();
-    };
+  const handleContinueClick = () => {
+    const selectedOptions = Object.keys(formState).filter((key) => formState[key]);
+    setSelectedMechanicsOptions(selectedOptions);
+    setShowModal(true);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Gérer la soumission du formulaire ici (envoi de données, etc.)
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
 
     return (
         <div>
             <Logo />
             <Navigation />
-            <TitlePage title="Mécanique & entretien" image={require('../assets/img/icons/outils.png')} alt="Icône d'outils" />
+            <TitlePage
+                title="Mécanique & entretien"
+                image={require('../assets/img/icons/outils.png')}
+                alt="Icône d'outils"
+            />
 
+{showModal && (
+        <ModalRepair
+          selectedOptions={selectedMechanicsOptions}
+          toggleOption={() => setShowModal(!showModal)}
+          closeModal={closeModal}
+          firstName={firstName}
+          setFirstName={setFirstName}
+          lastName={lastName}
+          setLastName={setLastName}
+          email={email}
+          setEmail={setEmail}
+          phone={phone}
+          setPhone={setPhone}
+          appointmentDate={appointmentDate}
+          setAppointmentDate={setAppointmentDate}
+        />
+      )}
+      
             <form className="mechanics-form" onSubmit={handleFormSubmit}>
                 <div className="form-group">
                     <CheckboxInput
                         id="freinage"
                         label="Freinage"
-                        checked={formState.brakes}
+                        checked={formState.freinage}
                         onChange={handleInputChange}
                     />
 
@@ -61,10 +96,9 @@ const MechanicsPage = () => {
                                 <span>Démarrage</span>
                             </div>
                         }
-                        checked={formState.battery}
+                        checked={formState.batterie}
                         onChange={handleInputChange}
                     />
-
 
                     <CheckboxInput
                         id="suspension"
@@ -81,7 +115,7 @@ const MechanicsPage = () => {
                     <CheckboxInput
                         id="courroie"
                         label="Courroie de distribution"
-                        checked={formState.timingBelt}
+                        checked={formState.courroie}
                         onChange={handleInputChange}
                     />
                     <CheckboxInput
@@ -101,32 +135,33 @@ const MechanicsPage = () => {
                         id="echappement"
                         label="Échappement"
                         alt="Photo d'un échappement"
-                        checked={formState.exhaust}
+                        checked={formState.echappement}
                         onChange={handleInputChange}
                     />
                     <CheckboxInput
                         id="moteur"
                         label="Motorisation"
                         alt="Photo d'un moteur"
-                        checked={formState.engine}
+                        checked={formState.moteur}
                         onChange={handleInputChange}
                     />
                     <CheckboxInput
                         id="eclairage"
                         label="Éclairage"
-                        checked={formState.lighting}
+                        checked={formState.eclairage}
                         onChange={handleInputChange}
                     />
                     <CheckboxInput
                         id="carrosserie"
                         label="Carrosserie"
                         alt="Photo d'un homme s'occupant de la carroserie d'une voiture"
-                        checked={formState.bodywork}
+                        checked={formState.carrosserie}
                         onChange={handleInputChange}
                     />
                 </div>
-                <button className="validate" onClick={handleContinueClick}>valider</button>
-
+                <button className="validate" onClick={handleContinueClick}>
+                    Valider
+                </button>
             </form>
             <Footer />
         </div>
@@ -134,3 +169,4 @@ const MechanicsPage = () => {
 };
 
 export default MechanicsPage;
+
