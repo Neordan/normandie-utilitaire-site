@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 
 const ModalRepair = ({
-  selectedOptions,
-  toggleOption,
+  maintenanceOptions,
+  selectedMechanicsOptions,
+  setSelectedMaintenanceOptions,
+  selectedTireOptions,
   closeModal,
   firstName,
   setFirstName,
@@ -15,16 +17,69 @@ const ModalRepair = ({
   appointmentDate,
   setAppointmentDate
 }) => {
+
+
+  const getLabelByOption = (option) => {
+    switch (option) {
+      case 'simple-maintenance':
+        return 'Vidange simple';
+      case 'complete-maintenance':
+        return 'Vidange complète';
+      case 'revision':
+        return 'Révision';
+      default:
+        return '';
+    }
+  };
+
+  const maintenanceOptionsArray = Object.values(maintenanceOptions);
+
+  useEffect(() => {
+    const storedOptions = JSON.parse(localStorage.getItem('maintenanceOptions')) || [];
+  }, []);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     // Gérer la soumission du formulaire ici (envoi de données, etc.)
   };
-
+  console.log(maintenanceOptions)
+  console.log(typeof maintenanceOptions)
   return (
     <div className="modal-overlay">
       <div className="modal-repair">
         <h2>Confirmation</h2>
         <form onSubmit={handleFormSubmit}>
+          {/* Blocs spécifiques à la page maintenance */}
+          {maintenanceOptionsArray.length > 0 && (
+            <div className="maintenance">
+              <h3>Prestations choisies :</h3>
+              {maintenanceOptionsArray.map((option, index) => (
+                <div key={option}>{getLabelByOption(option)}</div>
+              ))}
+            </div>
+          )}
+
+          {/* Blocs spécifiques à la page mécanique */}
+          {selectedMechanicsOptions && selectedMechanicsOptions.length > 0 && (
+            <div className="mechanics">
+              <h3>Options mécaniques :</h3>
+              {selectedMechanicsOptions.map((option) => (
+                <div key={option}>{option}</div>
+              ))}
+            </div>
+          )}
+
+          {/* Blocs spécifiques à la page pneu */}
+          {selectedTireOptions && selectedTireOptions.length > 0 && (
+            <div className="tire">
+              <h3>Options pneu :</h3>
+              {selectedTireOptions.map((option) => (
+                <div key={option}>{option}</div>
+              ))}
+            </div>
+          )}
+
+          {/* Reste du formulaire */}
           <div className="personal">
             <div className="block">
               <label htmlFor="firstName">Prénom</label>
@@ -62,23 +117,6 @@ const ModalRepair = ({
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
-          </div>
-          <div className="info-appointment">
-            <div className="tire"></div>
-            <div className="maintenance">
-              {/* Affichage des options de la page maintenance */}
-              <h3>Options de maintenance :</h3>
-              {selectedOptions.maintenance.map((option) => (
-                <div key={option}>{option}</div>
-              ))}
-            </div>
-            <div className="mechanics">
-              {/* Affichage des options de la page mechanics */}
-              <h3>Options de mécanique :</h3>
-              {selectedOptions.mechanics.map((option) => (
-                <div key={option}>{option}</div>
-              ))}
-            </div>
           </div>
           <div className="block">
             <label htmlFor="appointmentDate">Date de rendez-vous :</label>
