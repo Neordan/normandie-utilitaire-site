@@ -922,8 +922,7 @@ form .date .date-debut input[type=date], form .date .date-fin input[type=date] {
   width: 40%;
 }
 .modal-repair form .info-appointment {
-  height: 100px;
-  width: 100px;
+  width: 80%;
   margin: 0 auto 20px auto;
 }
 .modal-repair form button {
