@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../components/Logo';
 import Navigation from '../components/Navigation';
 import TitlePage from '../components/TitlePage';
@@ -6,60 +6,79 @@ import Footer from '../components/Footer';
 import ModalRepair from '../components/ModalRepair';
 
 const MaintenancePage = () => {
-  // State pour stocker les options sélectionnées
-  const [selectedOptions, setSelectedOptions] = useState([]);
-
-  // State pour gérer l'affichage des détails
+  const [showModal, setShowModal] = useState(false);
   const [showDetails, setShowDetails] = useState({
     'simple-maintenance': false,
     'complete-maintenance': false,
-    revision: false
+    revision: false,
   });
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [maintenanceOptions, setMaintenanceOptions] = useState([]);
 
-  // State pour gérer la visibilité de la modal
-  const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+  const storedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
+  setSelectedOptions(storedOptions);
+}, []);
 
-  // Fonction pour basculer l'état d'une option
+  useEffect(() => {
+    localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
+  }, [selectedOptions]);
+
+  useEffect(() => {
+    const maintenanceOptions = [];
+
+    if (selectedOptions['simple-maintenance']) {
+      maintenanceOptions.push('Vidange simple');
+    }
+    if (selectedOptions['complete-maintenance']) {
+      maintenanceOptions.push('Vidange complète');
+    }
+    if (selectedOptions['revision']) {
+      maintenanceOptions.push('Révision');
+    }
+
+  }, [selectedOptions]);
+
   const toggleOption = (option) => {
-    if (selectedOptions.includes(option)) {
-      // Si l'option est déjà sélectionnée, la retirer
-      setSelectedOptions((prevOptions) => prevOptions.filter((item) => item !== option));
-    } else {
-      // Sinon, l'ajouter à la liste des options sélectionnées
-      setSelectedOptions((prevOptions) => [...prevOptions, option]);
-    }
-
-    if (option === 'mechanics') {
-      setShowModal(!showModal); // Inverser l'état de la modal
-    }
+    setSelectedOptions((prevOptions) => {
+      const updatedOptions = {
+        ...prevOptions,
+        [option]: !prevOptions[option],
+      };
+      return updatedOptions;
+    });
+  
+    setMaintenanceOptions((prevOptions) => {
+      if (prevOptions.includes(option)) {
+        return prevOptions.filter((item) => item !== option);
+      } else {
+        return [...prevOptions, option];
+      }
+    });
   };
 
-  // Fonction pour basculer l'affichage des détails
+  const resetForm = () => {
+    setSelectedOptions({});
+    setMaintenanceOptions([]);
+  };
+  
   const toggleDetails = (option) => {
     setShowDetails((prevState) => ({
       ...prevState,
-      [option]: !prevState[option]
+      [option]: !prevState[option],
     }));
   };
 
-  // Gestion de la soumission du formulaire
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setShowModal(true); // Afficher la modal
-    console.log(selectedOptions);
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    setShowModal(true);
   };
 
-  // Fonction pour fermer la modal
   const closeModal = () => {
     setShowModal(false);
   };
 
-  // Informations détaillées pour chaque option
-  const detailedInformation = {
-    'simple-maintenance': 'Informations détaillées sur la vidange simple',
-    'complete-maintenance': 'Informations détaillées sur la vidange complète',
-    revision: 'Informations détaillées sur la révision'
-  };
+  console.log(maintenanceOptions)
 
   return (
     <div>
@@ -71,23 +90,23 @@ const MaintenancePage = () => {
         alt="Icône de goutte d'huile"
       />
 
-      {showModal && (
-        <ModalRepair
-          selectedOptions={selectedOptions}
-          closeModal={closeModal}
-        />
-      )}
+{showModal && (
+  <ModalRepair
+    maintenanceOptions={maintenanceOptions}
+    closeModal={closeModal}
+  />
+)}
+
 
       <form className="maintenance-form" onSubmit={handleFormSubmit}>
         <div className="inputs-group">
-          {/* Option : Vidange simple */}
           <div className="input-top">
             <div className="block-label">
               <input
                 type="checkbox"
                 name="simple-maintenance"
                 id="simple-maintenance"
-                checked={selectedOptions.includes('simple-maintenance')}
+                checked={selectedOptions['simple-maintenance']}
                 onChange={() => toggleOption('simple-maintenance')}
               />
               <div className="info-label">
@@ -99,22 +118,20 @@ const MaintenancePage = () => {
                 </div>
               </div>
             </div>
-            {/* Affichage des détails de la vidange simple */}
             {showDetails['simple-maintenance'] && (
               <div className="detail">
-                <p>{detailedInformation['simple-maintenance']}</p>
+                <p>Informations détaillées sur la vidange simple</p>
               </div>
             )}
           </div>
 
-          {/* Option : Vidange complète */}
           <div className="input-top">
             <div className="block-label">
               <input
                 type="checkbox"
                 name="complete-maintenance"
                 id="complete-maintenance"
-                checked={selectedOptions.includes('complete-maintenance')}
+                checked={selectedOptions['complete-maintenance']}
                 onChange={() => toggleOption('complete-maintenance')}
               />
               <div className="info-label">
@@ -126,22 +143,20 @@ const MaintenancePage = () => {
                 </div>
               </div>
             </div>
-            {/* Affichage des détails de la vidange complète */}
             {showDetails['complete-maintenance'] && (
               <div className="detail">
-                <p>{detailedInformation['complete-maintenance']}</p>
+                <p>Informations détaillées sur la vidange complète</p>
               </div>
             )}
           </div>
 
-          {/* Option : Révision */}
           <div className="input-top">
             <div className="block-label">
               <input
                 type="checkbox"
                 name="revision"
                 id="revision"
-                checked={selectedOptions.includes('revision')}
+                checked={selectedOptions['revision']}
                 onChange={() => toggleOption('revision')}
               />
               <div className="info-label">
@@ -153,10 +168,9 @@ const MaintenancePage = () => {
                 </div>
               </div>
             </div>
-            {/* Affichage des détails de la révision */}
             {showDetails['revision'] && (
               <div className="detail">
-                <p>{detailedInformation['revision']}</p>
+                <p>Informations détaillées sur la révision</p>
               </div>
             )}
           </div>
