@@ -20,17 +20,17 @@ const MechanicsPage = () => {
     carrosserie: false
   });
 
-  const [selectedMechanicsOptions, setSelectedMechanicsOptions] = useState({});
+  const [selectedMechanicsOptions, setSelectedMechanicsOptions] = useState([]);
   const [mechanicsOptions, setMechanicsOptions] = useState([]);
 
   useEffect(() => {
-    const storedOptions = JSON.parse(localStorage.getItem('selectedMechanicsOptions')) || {};
+    const storedOptions = JSON.parse(localStorage.getItem('mechanicsOptions')) || {};
     setFormState(storedOptions);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('selectedMechanicsOptions', JSON.stringify(selectedMechanicsOptions));
-  }, [selectedMechanicsOptions]);
+    localStorage.setItem('mechanicsOptions', JSON.stringify(mechanicsOptions));
+  }, [mechanicsOptions]);
 
   useEffect(() => {
     const mechanicsOptions = [];
@@ -39,11 +39,40 @@ const MechanicsPage = () => {
       mechanicsOptions.push('Freinage');
     }
 
-    // Ajoutez les autres options ici avec une structure similaire
+    if (selectedMechanicsOptions['batterie']) {
+      mechanicsOptions.push('Batterie');
+    }
 
-    setMechanicsOptions(mechanicsOptions);
+    if (selectedMechanicsOptions['suspension']) {
+      mechanicsOptions.push('Suspension');
+    }
+
+    if (selectedMechanicsOptions['courroie']) {
+      mechanicsOptions.push('courroie');
+    }
+
+    if (selectedMechanicsOptions['transmission']) {
+      mechanicsOptions.push('transmission');
+    }
+
+    if (selectedMechanicsOptions['moteur']) {
+      mechanicsOptions.push('moteur');
+    }
+
+    if (selectedMechanicsOptions['echappement']) {
+      mechanicsOptions.push('echappement');
+    }
+
+    if (selectedMechanicsOptions['eclairage']) {
+      mechanicsOptions.push('eclairage');
+    }
+
+    if (selectedMechanicsOptions['carrosserie']) {
+      mechanicsOptions.push('carrosserie');
+    }
+
+
   }, [selectedMechanicsOptions]);
-
 
   const toggleOption = (option) => {
     setSelectedMechanicsOptions((prevOptions) => {
@@ -62,29 +91,19 @@ const MechanicsPage = () => {
       }
     });
   };
+  
 
-  const handleInputChange = (id, checked) => {
-    setFormState((prevState) => ({
-      ...prevState,
-      [id]: checked
-    }));
-  };
-
-  const handleContinueClick = () => {
-    const selectedMechanicsOptions = Object.keys(formState).filter((key) => formState[key]);
-    console.log('Selected mechanics options:', mechanicsOptions);
-};
 
 const handleFormSubmit = (event) => {
     event.preventDefault();
     setShowModal(true);
   };
 
+  console.log(mechanicsOptions)
+
   const closeModal = () => {
     setShowModal(false);
   };
-
-  console.log(mechanicsOptions);
 
   return (
     <div>
@@ -98,7 +117,6 @@ const handleFormSubmit = (event) => {
 
       {showModal && (
         <ModalRepair
-          selectedOptions={['mechanics']}
           selectedMechanicsOptions={mechanicsOptions}
           closeModal={closeModal}
         />
