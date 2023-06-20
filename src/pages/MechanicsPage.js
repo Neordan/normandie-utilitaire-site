@@ -117,6 +117,7 @@ const handleFormSubmit = (event) => {
 
       {showModal && (
         <ModalRepair
+          selectedMaintenanceOptions={maintenanceOptions}
           selectedMechanicsOptions={mechanicsOptions}
           closeModal={closeModal}
         />
