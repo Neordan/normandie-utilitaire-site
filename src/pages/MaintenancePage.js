@@ -12,35 +12,35 @@ const MaintenancePage = () => {
     'complete-maintenance': false,
     revision: false,
   });
-  const [selectedOptions, setSelectedOptions] = useState({});
+  const [selectedMaintenanceOptions, setSelectedMaintenanceOptions] = useState([]);
   const [maintenanceOptions, setMaintenanceOptions] = useState([]);
 
   useEffect(() => {
-  const storedOptions = JSON.parse(localStorage.getItem('selectedOptions')) || {};
-  setSelectedOptions(storedOptions);
+  const storedOptions = JSON.parse(localStorage.getItem('selectedMaintenanceOptions')) || {};
+  setSelectedMaintenanceOptions(storedOptions);
 }, []);
 
   useEffect(() => {
-    localStorage.setItem('selectedOptions', JSON.stringify(selectedOptions));
-  }, [selectedOptions]);
+    localStorage.setItem('selectedMaintenanceOptions', JSON.stringify(selectedMaintenanceOptions));
+  }, [selectedMaintenanceOptions]);
 
   useEffect(() => {
     const maintenanceOptions = [];
 
-    if (selectedOptions['simple-maintenance']) {
+    if (selectedMaintenanceOptions['simple-maintenance']) {
       maintenanceOptions.push('Vidange simple');
     }
-    if (selectedOptions['complete-maintenance']) {
+    if (selectedMaintenanceOptions['complete-maintenance']) {
       maintenanceOptions.push('Vidange complète');
     }
-    if (selectedOptions['revision']) {
+    if (selectedMaintenanceOptions['revision']) {
       maintenanceOptions.push('Révision');
     }
 
-  }, [selectedOptions]);
+  }, [selectedMaintenanceOptions]);
 
   const toggleOption = (option) => {
-    setSelectedOptions((prevOptions) => {
+    setSelectedMaintenanceOptions((prevOptions) => {
       const updatedOptions = {
         ...prevOptions,
         [option]: !prevOptions[option],
@@ -88,7 +88,7 @@ const MaintenancePage = () => {
 
 {showModal && (
   <ModalRepair
-    maintenanceOptions={maintenanceOptions}
+    selectedMaintenanceOptions={maintenanceOptions}
     closeModal={closeModal}
   />
 )}
@@ -102,7 +102,7 @@ const MaintenancePage = () => {
                 type="checkbox"
                 name="simple-maintenance"
                 id="simple-maintenance"
-                checked={selectedOptions['simple-maintenance']}
+                checked={selectedMaintenanceOptions['simple-maintenance']}
                 onChange={() => toggleOption('Vidange simple')}
               />
               <div className="info-label">
@@ -127,7 +127,7 @@ const MaintenancePage = () => {
                 type="checkbox"
                 name="complete-maintenance"
                 id="complete-maintenance"
-                checked={selectedOptions['complete-maintenance']}
+                checked={selectedMaintenanceOptions['complete-maintenance']}
                 onChange={() => toggleOption('Vidange complète')}
               />
               <div className="info-label">
@@ -152,7 +152,7 @@ const MaintenancePage = () => {
                 type="checkbox"
                 name="revision"
                 id="revision"
-                checked={selectedOptions['revision']}
+                checked={selectedMaintenanceOptions['revision']}
                 onChange={() => toggleOption('Révision')}
               />
               <div className="info-label">
