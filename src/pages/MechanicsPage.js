@@ -110,7 +110,7 @@ const handleFormSubmit = (event) => {
             id="freinage"
             label="Freinage"
             checked={formState.freinage}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Freinage')}
           />
           <CheckboxInput
             id="batterie"
@@ -122,7 +122,7 @@ const handleFormSubmit = (event) => {
               </div>
             }
             checked={formState.batterie}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Batterie')}
           />
           <CheckboxInput
             id="suspension"
@@ -134,13 +134,13 @@ const handleFormSubmit = (event) => {
               </div>
             }
             checked={formState.suspension}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Suspension')}
           />
           <CheckboxInput
             id="courroie"
             label="Courroie de distribution"
             checked={formState.courroie}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Courroie')}
           />
           <CheckboxInput
             id="transmission"
@@ -153,34 +153,34 @@ const handleFormSubmit = (event) => {
             }
             alt="Photo d'un levier de vitesse"
             checked={formState.transmission}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Transmission')}
           />
           <CheckboxInput
             id="echappement"
             label="Échappement"
             alt="Photo d'un échappement"
             checked={formState.echappement}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Échappement')}
           />
           <CheckboxInput
             id="moteur"
             label="Motorisation"
             alt="Photo d'un moteur"
             checked={formState.moteur}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Moteur')}
           />
           <CheckboxInput
             id="eclairage"
             label="Éclairage"
             checked={formState.eclairage}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Éclairage')}
           />
           <CheckboxInput
             id="carrosserie"
             label="Carrosserie"
             alt="Photo d'un homme s'occupant de la carrosserie d'une voiture"
             checked={formState.carrosserie}
-            onChange={handleInputChange}
+            onChange={() => toggleOption('Carrosserie')}
           />
         </div>
         <button className="validate">
