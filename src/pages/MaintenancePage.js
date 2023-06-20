@@ -16,13 +16,13 @@ const MaintenancePage = () => {
   const [maintenanceOptions, setMaintenanceOptions] = useState([]);
 
   useEffect(() => {
-  const storedOptions = JSON.parse(localStorage.getItem('selectedMaintenanceOptions')) || {};
+  const storedOptions = JSON.parse(localStorage.getItem('maintenanceOptions')) || {};
   setSelectedMaintenanceOptions(storedOptions);
 }, []);
 
   useEffect(() => {
-    localStorage.setItem('selectedMaintenanceOptions', JSON.stringify(selectedMaintenanceOptions));
-  }, [selectedMaintenanceOptions]);
+    localStorage.setItem('maintenanceOptions', JSON.stringify(maintenanceOptions));
+  }, [maintenanceOptions]);
 
   useEffect(() => {
     const maintenanceOptions = [];
@@ -89,6 +89,7 @@ const MaintenancePage = () => {
 {showModal && (
   <ModalRepair
     selectedMaintenanceOptions={maintenanceOptions}
+    selectedMechanicsOptions={mechanicsOptions}
     closeModal={closeModal}
   />
 )}
