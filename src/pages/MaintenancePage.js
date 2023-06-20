@@ -57,10 +57,6 @@ const MaintenancePage = () => {
     });
   };
 
-  const resetForm = () => {
-    setSelectedOptions({});
-    setMaintenanceOptions([]);
-  };
   
   const toggleDetails = (option) => {
     setShowDetails((prevState) => ({
@@ -107,7 +103,7 @@ const MaintenancePage = () => {
                 name="simple-maintenance"
                 id="simple-maintenance"
                 checked={selectedOptions['simple-maintenance']}
-                onChange={() => toggleOption('simple-maintenance')}
+                onChange={() => toggleOption('Vidange simple')}
               />
               <div className="info-label">
                 <label htmlFor="simple-maintenance">Vidange simple</label>
@@ -132,7 +128,7 @@ const MaintenancePage = () => {
                 name="complete-maintenance"
                 id="complete-maintenance"
                 checked={selectedOptions['complete-maintenance']}
-                onChange={() => toggleOption('complete-maintenance')}
+                onChange={() => toggleOption('Vidange complète')}
               />
               <div className="info-label">
                 <label htmlFor="complete-maintenance">Vidange complète</label>
@@ -157,7 +153,7 @@ const MaintenancePage = () => {
                 name="revision"
                 id="revision"
                 checked={selectedOptions['revision']}
-                onChange={() => toggleOption('revision')}
+                onChange={() => toggleOption('Révision')}
               />
               <div className="info-label">
                 <label htmlFor="revision">Révision</label>
