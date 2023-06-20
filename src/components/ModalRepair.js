@@ -1,28 +1,13 @@
 import React, { useEffect } from 'react';
 
 const ModalRepair = ({
-  maintenanceOptions,
   selectedMechanicsOptions,
-  setSelectedMaintenanceOptions,
-  selectedTireOptions,
+  selectedMaintenanceOptions,
   closeModal,
-  firstName,
-  setFirstName,
-  lastName,
-  setLastName,
-  email,
-  setEmail,
-  phone,
-  setPhone,
-  appointmentDate,
-  setAppointmentDate
 }) => {
-
-
-  const maintenanceOptionsArray = Object.values(maintenanceOptions);
-
   useEffect(() => {
-    const storedOptions = JSON.parse(localStorage.getItem('maintenanceOptions')) || [];
+    const storedOptions = JSON.parse(localStorage.getItem('mechanicsOptions')) || [];
+    setSelectedMechanicsOptions(storedOptions);
   }, []);
 
   const handleFormSubmit = (e) => {
@@ -37,10 +22,10 @@ const ModalRepair = ({
         <h2>Confirmation</h2>
         <form onSubmit={handleFormSubmit}>
           {/* Blocs spécifiques à la page maintenance */}
-          {maintenanceOptionsArray.length > 0 && (
+          {selectedMaintenanceOptions && selectedMaintenanceOptions.length > 0 && (
             <div className="maintenance">
               <h3>Prestations choisies :</h3>
-              {maintenanceOptionsArray.map((option, index) => (
+              {selectedMaintenanceOptions.map((option) => (
                 <div key={option}>{option}</div>
               ))}
             </div>
