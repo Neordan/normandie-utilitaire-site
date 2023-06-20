@@ -19,19 +19,6 @@ const ModalRepair = ({
 }) => {
 
 
-  const getLabelByOption = (option) => {
-    switch (option) {
-      case 'simple-maintenance':
-        return 'Vidange simple';
-      case 'complete-maintenance':
-        return 'Vidange complète';
-      case 'revision':
-        return 'Révision';
-      default:
-        return '';
-    }
-  };
-
   const maintenanceOptionsArray = Object.values(maintenanceOptions);
 
   useEffect(() => {
@@ -54,7 +41,7 @@ const ModalRepair = ({
             <div className="maintenance">
               <h3>Prestations choisies :</h3>
               {maintenanceOptionsArray.map((option, index) => (
-                <div key={option}>{getLabelByOption(option)}</div>
+                <div key={option}>{option}</div>
               ))}
             </div>
           )}
