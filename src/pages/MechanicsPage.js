@@ -32,48 +32,6 @@ const MechanicsPage = () => {
     localStorage.setItem('mechanicsOptions', JSON.stringify(mechanicsOptions));
   }, [mechanicsOptions]);
 
-  useEffect(() => {
-    const mechanicsOptions = [];
-
-    if (selectedMechanicsOptions['freinage']) {
-      mechanicsOptions.push('Freinage');
-    }
-
-    if (selectedMechanicsOptions['batterie']) {
-      mechanicsOptions.push('Batterie');
-    }
-
-    if (selectedMechanicsOptions['suspension']) {
-      mechanicsOptions.push('Suspension');
-    }
-
-    if (selectedMechanicsOptions['courroie']) {
-      mechanicsOptions.push('courroie');
-    }
-
-    if (selectedMechanicsOptions['transmission']) {
-      mechanicsOptions.push('transmission');
-    }
-
-    if (selectedMechanicsOptions['moteur']) {
-      mechanicsOptions.push('moteur');
-    }
-
-    if (selectedMechanicsOptions['echappement']) {
-      mechanicsOptions.push('echappement');
-    }
-
-    if (selectedMechanicsOptions['eclairage']) {
-      mechanicsOptions.push('eclairage');
-    }
-
-    if (selectedMechanicsOptions['carrosserie']) {
-      mechanicsOptions.push('carrosserie');
-    }
-
-
-  }, [selectedMechanicsOptions]);
-
   const toggleOption = (option) => {
     setSelectedMechanicsOptions((prevOptions) => {
       const updatedOptions = {
@@ -82,7 +40,7 @@ const MechanicsPage = () => {
       };
       return updatedOptions;
     });
-  
+
     setMechanicsOptions((prevOptions) => {
       if (prevOptions.includes(option)) {
         return prevOptions.filter((item) => item !== option);
@@ -91,15 +49,11 @@ const MechanicsPage = () => {
       }
     });
   };
-  
 
-
-const handleFormSubmit = (event) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
     setShowModal(true);
   };
-
-  console.log(mechanicsOptions)
 
   const closeModal = () => {
     setShowModal(false);
@@ -117,8 +71,8 @@ const handleFormSubmit = (event) => {
 
       {showModal && (
         <ModalRepair
-          selectedMaintenanceOptions={maintenanceOptions}
-          selectedMechanicsOptions={mechanicsOptions}
+        selectedMaintenanceOptions={maintenanceOptions}
+        selectedMechanicsOptions={mechanicsOptions}
           closeModal={closeModal}
         />
       )}
