@@ -11,3 +11,6 @@ const TitlePage = ({ title , image, alt}) => {
 };
 
 export default TitlePage;
+
+
+
