@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/normandie-utilitaire-site/static/css/main.9f26696b.css",
+    "main.js": "/normandie-utilitaire-site/static/js/main.48e0efd6.js",
+    "static/media/vidange&revision.jpg": "/normandie-utilitaire-site/static/media/vidange&revision.9624a9c988a46be147df.jpg",
+    "static/media/transmission.jpg": "/normandie-utilitaire-site/static/media/transmission.59b2a789b627754cc245.jpg",
+    "static/media/eclairage.jpg": "/normandie-utilitaire-site/static/media/eclairage.f36e8b72c4d936e9148a.jpg",
+    "static/media/carrosserie.jpg": "/normandie-utilitaire-site/static/media/carrosserie.e1b30a12e7788ab0ddb4.jpg",
+    "static/media/suspension.jpg": "/normandie-utilitaire-site/static/media/suspension.0a89325aa09d962a8f0d.jpg",
+    "static/media/motorisation.jpg": "/normandie-utilitaire-site/static/media/motorisation.b18dd02c4350a8ff4ee5.jpg",
+    "static/media/courroie.jpg": "/normandie-utilitaire-site/static/media/courroie.56c9a76635cc724af1dd.jpg",
+    "static/media/pneu.jpg": "/normandie-utilitaire-site/static/media/pneu.30f3c949682736de0ca1.jpg",
+    "static/media/freinage.jpg": "/normandie-utilitaire-site/static/media/freinage.cf35f3afc003d99427c0.jpg",
+    "static/media/echappement.jpg": "/normandie-utilitaire-site/static/media/echappement.311993b2ae933add8700.jpg",
+    "static/media/batterie.jpg": "/normandie-utilitaire-site/static/media/batterie.6081fa1eb4d8ef1bf440.jpg",
+    "static/media/phothgarage.jpg": "/normandie-utilitaire-site/static/media/phothgarage.ffaffc665ceaf6e23ca1.jpg",
+    "static/media/Raleway-Regular.ttf": "/normandie-utilitaire-site/static/media/Raleway-Regular.3927fa2a37e6f7f4c7c0.ttf",
+    "static/media/Rubik-Regular.ttf": "/normandie-utilitaire-site/static/media/Rubik-Regular.42535d1e2d489e27b525.ttf",
+    "static/media/CAMION12.jpg": "/normandie-utilitaire-site/static/media/CAMION12.a678286177ebd28b2fb0.jpg",
+    "static/media/logoversionmobile.png": "/normandie-utilitaire-site/static/media/logoversionmobile.55fc653b1874ab920dfc.png",
+    "static/media/CAMION16.jpg": "/normandie-utilitaire-site/static/media/CAMION16.93a2f5d2c36e030fa2b8.jpg",
+    "index.html": "/normandie-utilitaire-site/index.html",
+    "main.9f26696b.css.map": "/normandie-utilitaire-site/static/css/main.9f26696b.css.map",
+    "main.48e0efd6.js.map": "/normandie-utilitaire-site/static/js/main.48e0efd6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f26696b.css",
+    "static/js/main.48e0efd6.js"
+  ]
+}
